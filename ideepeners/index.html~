@@ -1,9 +1,5 @@
 <!DOCTYPE HTML>
-<!--
-	Iridium by TEMPLATED
-    templated.co @templatedco
-    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
+
 <html>
 	<head>
 		<title>IDeepeners</title>
@@ -156,69 +152,6 @@
 
 			</div>
 		</div>
-	</div>
-<div id="food">
-		<div id="featured">
-		<header class="head">Food Blog</header>
-			<div class="container">
-			
-				<div class="row">
-					<div class="4u">
-						
-						<h2>Aenean elementum facilisis</h2>
-						<a href="#" class="image full"><img src="images/pic01.jpg" alt="" /></a>
-						<p>Nullam non wisi a sem semper eleifend. Donec mattis libero eget urna. Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum. Quisque dictum. Pellentesque viverra vulputate enim.</p>
-						<p><a href="read.html" class="button">More Details</a></p>
-					</div>
-					<div class="4u">
-						<h2>Fusce ultrices fringilla</h2>
-						<a href="#" class="image full"><img src="images/pic02.jpg" alt="" /></a>
-						<p>Nullam non wisi a sem semper eleifend. Donec mattis libero eget urna. Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum. Quisque dictum. Pellentesque viverra vulputate enim.</p>
-						<p><a href="read.html" class="button">More Details</a></p>
-					</div>
-					<div class="4u">
-						<h2>Etiam rhoncus volutpat erat</h2>
-						<a href="#" class="image full"><img src="images/pic03.jpg" alt="" /></a>
-						<p>Nullam non wisi a sem semper eleifend. Donec mattis libero eget urna. Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum. Quisque dictum. Pellentesque viverra vulputate enim.</p>
-						<p><a href="read.html" class="button">More Details</a></p>
-					</div>
-					<button class="btn btn-info"><a href="reading_fo.html" style="text-decoration:none;margin-right:50px;"><b>View More Blogs</b></a></button>
-				</div>
-				
-			</div>
-		</div>
-	</div>
-<div id="travel">
-		<div id="featured">
-		<header class="head">Travel Blog</header>
-			<div class="container">
-			
-				<div class="row">
-					<div class="4u">
-						
-						<h2>Aenean elementum facilisis</h2>
-						<a href="#" class="image full"><img src="images/pic01.jpg" alt="" /></a>
-						<p>Nullam non wisi a sem semper eleifend. Donec mattis libero eget urna. Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum. Quisque dictum. Pellentesque viverra vulputate enim.</p>
-						<p><a href="read.html" class="button">More Details</a></p>
-					</div>
-					<div class="4u">
-						<h2>Fusce ultrices fringilla</h2>
-						<a href="#" class="image full"><img src="images/pic02.jpg" alt="" /></a>
-						<p>Nullam non wisi a sem semper eleifend. Donec mattis libero eget urna. Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum. Quisque dictum. Pellentesque viverra vulputate enim.</p>
-						<p><a href="read.html" class="button">More Details</a></p>
-					</div>
-					<div class="4u">
-						<h2>Etiam rhoncus volutpat erat</h2>
-						<a href="#" class="image full"><img src="images/pic03.jpg" alt="" /></a>
-						<p>Nullam non wisi a sem semper eleifend. Donec mattis libero eget urna. Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum. Quisque dictum. Pellentesque viverra vulputate enim.</p>
-						<p><a href="read.html" class="button">More Details</a></p>
-					
-					</div>
-					<button class="btn btn-info"><a href="reading.html" style="text-decoration:none;margin-right:50px"><b>View More Blogs</b></a></button>
-				</div>
-			</div>
-		</div>
-		
 	</div>
 
 		<!-- Footer -->

@@ -36,6 +36,44 @@
 </head>
 
     <body>
+       
+        
+
+    <header class="navbar navbar-inverse navbar-fixed-top" role="banner" style="height:80px">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html" style="text-decoration:none">Ideepeners</a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#" style="text-decoration:none">Home</a></li>
+                    <li><a href="#" style="text-decoration:none">About Us</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="text-decoration:none">Pages <i class="icon-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="full-width.html" >Full Width Page</a></li>
+                            <li><a href="#">Dropdown Menu 1</a></li>
+                            <li><a href="#">Dropdown Menu 2</a></li>
+                            <li><a href="#">Dropdown Menu 3</a></li>
+                            <li><a href="#">Dropdown Menu 4</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#" >Privacy Policy</a></li>
+                            <li><a href="#">Terms of Use</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="#" style="text-decoration:none">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header><!--/header-->
+
         <!-- Page Title -->
 		<div class="section section-breadcrumbs">
 			<div class="container">
