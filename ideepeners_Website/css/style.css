@@ -97,7 +97,8 @@ input[type=text]
   position: absolute;
   margin-top:70%;
   margin-left:50%;
-  width: 376px;
+  width: 300px;
+  height:400px;
   transform: translateX(-50%) translateY(-50%);
   background: #fff;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -134,7 +135,7 @@ input[type=text]
   text-transform: uppercase;
 }
 .card__thumb {
-  height: 235px;
+  height: 150px;
   overflow: hidden;
   background-color: #000;
   transition: height 0.3s;
@@ -142,6 +143,8 @@ input[type=text]
 .card__thumb img {
   display: block;
   opacity: 1;
+  height:150px;
+  width:300px;
   transition: opacity 0.3s, transform 0.3s;
   transform: scale(1);
 }
@@ -258,6 +261,17 @@ input[type=text]
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
 }
+.icon--bell:before {
+  content: "\f0e5 ";
+  display: inline-block;
+  margin-left:15px;
+  font: normal normal normal 16px/1 FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+}
+
 .footer-container {
   height: 105px;
   background-color: #2F323A;
