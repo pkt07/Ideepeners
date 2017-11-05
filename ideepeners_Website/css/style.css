@@ -1,6 +1,11 @@
 .navigation {
   height: 70px;
   background: #eee;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+}
+.navigation div{
 }
 .brand {
   position: fixed;
@@ -75,6 +80,7 @@ input[type=text]
     background-color:#ddd;
     padding:5%;
 }
+
 .fa{
     font-size:2em;
     margin-left:-13%;
@@ -208,7 +214,6 @@ h4{
 }
 @import url(https://fonts.googleapis.com/css?family=Lato);
 .container1{
-    margin-top:3%;
     margin-left:10%;
     max-width:1100px;
 }
