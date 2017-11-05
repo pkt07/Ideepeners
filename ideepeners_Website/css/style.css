@@ -145,6 +145,25 @@ input[type=text]
     margin: 2px 10px auto;
     
 }
+.btn-warning{
+    width:300px;
+    margin-top:-18%;
+    height:50px;
+
+}
+#over{
+    margin-top:1%;
+    margin-left:-1%;
+
+}
+h4{
+    margin-left:5%;
+}
+.fa-user-o{
+    margin-left:-50%;
+    letter-spacing: 15px;
+}
+@import url(https://fonts.googleapis.com/css?family=Lato);
 .container1{
     margin-top:3%;
     margin-left:10%;
@@ -160,13 +179,15 @@ input[type=text]
 .img__description {
   position:relative;
   margin-top:-100%;
-  background:#eee;
+  background:#fefefe;
   height:300px;
   color: #222;
   visibility: hidden;
   opacity: 0;
+  font-family:'Lato';
   width:300px;
   border:2px solid #ccc;
+  border-radius:2px; 
   box-shadow:10px 10px 10px 10px #ddd;
 }
 .img__wrap:hover{
@@ -183,7 +204,70 @@ display:text;
   visibility: visible;
   opacity: 1;
 }
+.footer-container {
+  height: 70px;
+  background-color: #212F3D;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: #E8EEF2;
+  padding: 20px 30px 0px 0px;
+  align-items: baseline;
+  list-style-type: none;
+  margin-top:7%;
+}
 
+.footer-container i {
+  font-size:1.8em;
+  margin-top:15px;
+  color: #E8EEF2;
+  position:relative;
+  margin-left:500%;
+}
+
+.bg-envelope:hover {
+  color: #14A1A4;
+  transition-duration: 1s;
+}
+
+.bg-facebook:hover {
+  color: #4067A9;
+  transition-duration: 1s;
+}
+
+.bg-twitter:hover {
+  color: #1DA1F2;
+  transition-duration: 1s;
+}
+.footer-container li {
+  margin: -10px 15px;
+ margin-bottom:30px;
+}
+.footer-para{
+    width:550px;
+    margin-bottom:5%;
+    font-size:1.4em;
+    font-weight: 100;
+    margin: auto;
+}
+.footer-para p{
+    margin-top:-2%;
+    margin-left:-10px;
+    word-spacing: 55px;
+}
+.foot1{
+    margin-left:-220px;
+    margin-top: -10%;
+    width:50px;
+}
+/*.foot{
+  position: absolute;
+  margin: -7px;
+  right:45%;
+  font-size:1.2em;
+  font-weight: 100;
+}*/
 @media only screen and (max-width: 800px) {
   .nav-mobile {
     display: block;
