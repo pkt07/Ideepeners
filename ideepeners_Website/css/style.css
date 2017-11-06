@@ -113,8 +113,11 @@ input[type=text]
 }
 .carousel-inner{
     height:440px;
-    margin-top:2%;
 
+}
+.carousel{
+    position:relative;
+    margin-top:7%;
 }
 .para{
     margin-left:9%;
