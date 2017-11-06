@@ -1,0 +1,89 @@
+#container{
+	background-color:#fefefe;
+	display:block;
+	width:1350px;
+	border:1px solid #fff;
+	height:50px;
+	margin-left:-5%;
+	margin-top:0%;
+}
+.head{
+	font-family:'Lato';
+	font-size:3.1em;
+	position:relative;
+	margin-left:16%;
+	float:left;
+	margin-top:0.1%;
+	font-weight:100;
+	letter-spacing:-6px;
+}
+.tex{
+	font-family:'Lato';
+	font-size:1em;
+	float:right;
+	margin-right:10%;
+	margin-top:1%;
+}
+#main{
+	background-color:#F4F6F6;
+}
+/*#79F7A5*/
+body {
+  height: 100%;
+  font-family: "Open Sans", sans-serif;
+}
+.container {
+  position: fixed;
+  margin-top:22%;
+  left:25%;
+  transform: translate(-50%, -50%);
+
+}
+.panel {
+  border-radius: 0;
+  box-shadow: 5px 5px #222;
+  -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.2);
+}
+.panel-heading {
+  text-align: center;
+  padding-top: 18px;
+  font-size: 1.2em;
+  height: 61px;
+  margin-bottom: 30px;
+}
+#login-link, #register-link {
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+#login-link {
+  color: #7be5a0;
+  margin-right: 15px;
+}
+#register-link {
+  color: #4e5166;
+}
+.panel-login input[type="text"], .panel-login input[type="email"], .panel-login input[type="password"] {
+  height: 40px;
+  font-size: 16px;
+}
+#login-submit, #register-submit {
+  background-color: #4e5166;
+  text-decoration: none;
+  color: #fff !important;
+  margin-top: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 0;
+}
+#forgot-password {
+  color: #dd8371 !important;
+  text-align: right;
+  float: right;
+}
+#remember-text {
+  font-size: 1em;
+  font-weight: 300;
+}
