@@ -12,14 +12,14 @@
   line-height:40px;
   font-size: 1.3em;
   text-decoration: none;
-  margin-top:0.5%;
+  margin-top:0.1%;
 }
 .brand a, .brand a:hover {
   color: #8E44AD;
   text-decoration: none;
   font-size:2.8em;
-  font-weight:500;
-  font-family:'Ubuntu';
+  font-weight:200;
+  font-family:'Lato';
   letter-spacing:-4px;
   text-decoration: none;
 }
@@ -70,14 +70,19 @@ nav ul li ul li a {
 }
 input[type=text]
 {
-    width:250px;
-    margin-left:-220%;
-    margin-top:10px;
+    width:200px;
+    margin-left:-290%;
+    margin-top:5px;
     height:40px;
     border-radius:15px;
     border:1px solid #eee;
     background-color:#ddd;
     padding:5%;
+    box-sizing: border-box;
+    z-index:2;
+}
+input[type=text]:focus{
+    outline:none;
 }
 
 .fa{
@@ -87,10 +92,23 @@ input[type=text]
 }
 .btn-info{
     margin-left:80%;
-    width:160px;
+    width:150px;
     margin-top:-6%;
-    height:30px;
+    height:35px;
+}
+.btn-info:focus{
+    outline:0 none;
+}
 
+.new{
+    float:right;
+    font-size:0.7em;
+}
+.use{
+    border-radius: 50%;
+    margin-left:-45%;
+    padding-right:1px;
+    letter-spacing: 5px;
 }
 /* Mobile navigation */
 .nav-mobile {
@@ -116,7 +134,7 @@ input[type=text]
 }
 .carousel{
     position:relative;
-    margin-top:7%;
+    margin-top:2%;
 }
 .para{
     margin-left:9%;
@@ -132,7 +150,7 @@ input[type=text]
     height:30px;
     padding-left:2%;
     border-radius:18px;
-    font-weight:800;
+    font-weight:100;
     font-size:1em;
     font-family:'Ubuntu';
 }
@@ -160,7 +178,7 @@ input[type=text]
     margin-left:33%;
     border:1px solid #eee;
     background-color:#ddd;
-    width:280px;
+    width:260px;
     height:30px;
     padding-left:2%;
     border-radius:18px;
@@ -240,6 +258,7 @@ h4{
   width:300px;
   border:2px solid #ccc;
   border-radius:2px; 
+
 box-shadow:0 50px 50px -25px #ccc;
 }
 .img__wrap:hover{
