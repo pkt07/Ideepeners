@@ -74,15 +74,12 @@ input[type=text]
     margin-left:-290%;
     margin-top:5px;
     height:40px;
-    border-radius:15px;
+    border-radius:24px;
     border:1px solid #eee;
     background-color:#ddd;
     padding:5%;
     box-sizing: border-box;
     z-index:2;
-    -webkit-transition: all .5s;
-    -moz-transition: all .5s;
-    transition: all .5s;
 }
 input[type=text]:focus{
     outline:none;
@@ -130,11 +127,11 @@ outline: none;
   width: 70px;
 }
 .top{
-    margin-top:-4%;
+    margin-top:-4.2%;
     float:right;
     margin-right:6%;
     font-size:1.1em;
-    font-weight:600;
+    font-weight:400;
     padding-top:0.5%;
 }
 .carousel-inner{
@@ -253,7 +250,7 @@ h4{
 
 .img__wrap {
   position: relative;
-  height: 320px;
+  height: 300px;
   width: 300px;
 }
 
@@ -286,6 +283,87 @@ display:text;
   visibility: visible;
   opacity: 1;
 }
+.dropdown {
+  display: inline-block;
+  position: relative;
+  margin-left:20%;
+  top:-45px;
+
+}
+
+.dd-button {
+  display: inline-block;
+  border: 1px solid gray;
+  border-radius:24px;
+  padding: 10px 30px 10px 20px;
+  background-color: #eee;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.dd-button:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid black;
+}
+
+.dd-button:hover {
+  background-color: #eeeeee;
+}
+
+
+.dd-input {
+  display: none;
+}
+
+.dd-menu {
+  position: absolute;
+  top: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0;
+  margin: 2px 0 0 0;
+  box-shadow: 0 0 6px 0 rgba(0,0,0,0.1);
+  background-color: #ffffff;
+  list-style-type: none;
+}
+
+.dd-input + .dd-menu {
+  display: none;
+} 
+
+.dd-input:checked + .dd-menu {
+  display: block;
+} 
+
+.dd-menu li {
+  padding: 10px 20px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.dd-menu li:hover {
+  background-color: #f6f6f6;
+}
+
+.dd-menu li a {
+  display: block;
+  margin: -10px -20px;
+  padding: 10px 20px;
+}
+
+.dd-menu li.divider{
+  padding: 0;
+  border-bottom: 1px solid #cccccc;
+}
+
 .footer-container {
   height: 70px;
   background-color: #212F3D;
