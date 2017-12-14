@@ -790,6 +790,9 @@ article {
 .responsive-image {
   max-width: 100%;
 }
+.responsive-image:hover{
+  opacity: 0.1;
+}
 .tex{
   position: relative;
   top:-350px;
@@ -804,11 +807,15 @@ visibility:visible;
 .cell {
     margin: 1rem;
   }
-
+.cell .tex{
+display:none;
+}
+.cell:hover .tex{
+  display: block;
+}
 .cell img {
   display: block;
 }
-
 /* tablet */
 @media screen and (min-width: 600px) {
   .grid {
