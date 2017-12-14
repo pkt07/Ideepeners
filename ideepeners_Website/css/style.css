@@ -9,7 +9,7 @@ body{
   z-index: 2;
   top:0;
   left:0;
-  box-shadow:2px 2px 2px #eee;
+  box-shadow:0px 1px 2px -1px rgba(0,0,0,.75);
 }
 .brand {
   position: fixed;
@@ -97,9 +97,9 @@ input[type=text]:focus{
   width:160px;
   height:30px;
   position:relative;
-  left:75%;
+  left:80%;
   top:10px;
-  padding-top:3px;
+  padding-top:2px;
   border-radius:24px;
   background-color:#8E44AD;
   color:#fefefe;
@@ -145,18 +145,18 @@ outline: none;
 }
 .top{
     position: relative;
-    margin-top:-2%;
-    left:95%;
+    margin-top:-1.6%;
+    left:100%;
     font-weight:550;
 }
 .slider, 
 .slider > div {
     /* Images default to Center Center. Maybe try 'center top'? */
     display: block;
-    width: 1170px;
+    width: 1200px;
     height: 500px;
     position:relative;
-    margin-left:3.7%;
+    margin-left:10px;
     /* height: 100vh; *//* If you want fullscreen */
     position: relative;
     top:15%;
@@ -190,7 +190,7 @@ outline: none;
     line-height: 0;
     box-sizing: content-box;
     border-radius: 3px;
-    z-index: 4;
+    z-index:-1;
 }
 
 .slider > i svg {
@@ -236,7 +236,7 @@ outline: none;
 .slider > ul {
     position: absolute;
     bottom: 10px;
-    left:50%;
+    left:45%;
     z-index: 4;
     padding: 0;
     margin: 0;
@@ -314,13 +314,13 @@ outline: none;
     }
 }
 .para{
-    margin-left:13%;
+    margin-left:5.4%;
     margin-top:3%;
     font-size:1.4em;
 }
 .text{
     margin-top:-4%;
-    margin-left:25%;
+    margin-left:13%;
     border:1px solid #eee;
     background-color:#ddd;
     width:180px;
@@ -333,7 +333,7 @@ outline: none;
 }
 .para1{
     position: relative;
-    left:10%;
+    left:5.1%;
    font-size:1.8em;
    font-family: 'Ubuntu';
 
@@ -386,7 +386,7 @@ outline: none;
 .more{
     float:right;
     position: relative;
-    margin-right:10%;
+    right:3.5%;
     margin-top:-4%; 
     font-size:1.6em;
     font-family: 'Ubuntu';
@@ -415,6 +415,9 @@ outline: none;
 }
 .gallery {
   width: 1500px;
+  position: relative;
+  top:-15px;
+  left:-20px;
 }
 header h1 {
   text-align: center;
@@ -547,8 +550,8 @@ h4{
   position:relative;
   cursor:pointer;
   transition:background .3s ease;
-  top:-70px;
-  left:-155%;
+  top:-140px;
+  left:-205%;
   border:1px solid #333;
 }
 .dropdown-button:hover {
@@ -559,9 +562,9 @@ h4{
   font-size:70%;
   position:absolute;
   right:18px;
-  top:-58px;
+  top:-128px;
   bottom:0;
-  left:-72%;
+  left:-122%;
   height:5px;
   color:#333;
 }
@@ -570,8 +573,8 @@ h4{
   transition:all .3s ease;
   transform:scaleY(1);
   color:#333;
-  top:-40px;
-  left:-150%;
+  top:-160px;
+  left:-200%;
 }
 .dropdown ul {
   visibility:hidden;
@@ -644,7 +647,7 @@ h4{
   background: black;
   margin-bottom: 3px;
   position: relative;
-  left:-240%;
+  left:-290%;
   top:20px;
 }
 
@@ -814,7 +817,7 @@ display:none;
   display: block;
 }
 .cell img {
-  display: block;
+  display:block;
 }
 /* tablet */
 @media screen and (min-width: 600px) {
