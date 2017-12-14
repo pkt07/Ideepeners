@@ -54,7 +54,12 @@
 
 
 <div class="main">
-	<p class="para" style="font-family:'Ubuntu'">Trending in</p>
+	<p class="para" style="font-family:'Ubuntu'" id="p_id"></p>
+	<script>
+	var s = '{"first_name" : "Trending"}';
+	var obj = JSON.parse(s);
+	document.getElementById("p_id").innerHTML = obj.first_name;
+	</script>
 	<p class="text">Yashwant Sinha<i class="fa fa-pencil"></i></p>
 	<p class="more">More<i class="fa fa-angle-right"></i></p>
 </div>
@@ -89,24 +94,71 @@
  
       <div class="cell">
           <img src="images/gallery-item-2-big.jpg" class="responsive-image">
-         <div class="border" style="width:262px;left:10.5%;height:60px"><img class="image_title" src="images/home-img-5.jpg" height="42px" width="42px"><p class="image_holder">Yashwant Sinha</p></div> 
-      </div>
-      <div class="cell">
-        <img src="images/gallery-item-2-big.jpg" class="responsive-image">
-                 <div class="border" style="width:262px;left:10.5%;height:60px"><img class="image_title" src="images/home-img-5.jpg" height="42px" width="42px"><p class="image_holder">Yashwant Sinha</p></div> 
-      </div>
-      <div class="cell">
-        <img src="images/gallery-item-2-big.jpg" class="responsive-image">
-                 <div class="border" style="width:262px;left:10.5%;height:60px"><img class="image_title" src="images/home-img-5.jpg" height="42px" width="42px"><p class="image_holder">Yashwant Sinha</p></div>
-      </div>
-      <div class="cell">
-        <img src="images/gallery-item-2-big.jpg" class="responsive-image">
-                 <div class="border" style="width:262px;left:10.5%;height:60px"><img class="image_title" src="images/home-img-5.jpg" height="42px" width="42px"><p class="image_holder">Yashwant Sinha</p></div> 
+         <div class="border" style="width:262px;left:10.5%;height:60px">
+         <img class="image_title" src="images/home-img-5.jpg" height="42px" width="42px"><p class="image_holder" id="user"></p>
+         <div class="tex" id="read"></div>
+         <script>
+var s = '{"author" : "Shubham Sharma" ,"text" : "Hey everybody - this is barack. Just finished a great rally in Charlottesville, and am looking forward to your questions. At the top, I do want to say that our thoughts and prayers are with folks who are dealing with Hurricane Isaac in the Gulf, and to let them know that we are going to be coordinating with state and local officials to make sure that we give families everything they need to recover"}';
+var obj = JSON.parse(s);
+document.getElementById("user").innerHTML =obj.author;
+document.getElementById("read").innerHTML =obj.text;
+</script>
 
+         </div> 
       </div>
+
+
+     <div class="cell">
+         <img src="images/gallery-item-2-big.jpg" class="responsive-image">
+       <div class="border" style="width:262px;left:10.5%;height:60px">
+        <img class="image_title" src="images/home-img-5.jpg" height="42px" width="42px"><p class="image_holder" id="user1"></p>
+         <div class="tex" id="read1"></div>
+         <script>
+var s = '{"author" : "Ritvik Bhatt" ,"text" : "Hey everybody - this is barack. Just finished a great rally in Charlottesville, and am looking forward to your questions. At the top, I do want to say that our thoughts and prayers are with folks who are dealing with Hurricane Isaac in the Gulf, and to let them know that we are going to be coordinating with state and local officials to make sure that we give families everything they need to recover"}';
+var obj = JSON.parse(s);
+document.getElementById("user1").innerHTML =obj.author;
+document.getElementById("read1").innerHTML =obj.text;
+</script>
+
+         </div> 
+      </div>
+
+
+<div class="cell">
+         <img src="images/gallery-item-2-big.jpg" class="responsive-image">
+       <div class="border" style="width:262px;left:10.5%;height:60px">
+        <img class="image_title" src="images/home-img-5.jpg" height="42px" width="42px"><p class="image_holder" id="user2"></p>
+         <div class="tex" id="read2"></div>
+         <script>
+var s = '{"author" : "shivansh mandloi" ,"text" : "Hey everybody - this is barack. Just finished a great rally in Charlottesville, and am looking forward to your questions. At the top, I do want to say that our thoughts and prayers are with folks who are dealing with Hurricane Isaac in the Gulf, and to let them know that we are going to be coordinating with state and local officials to make sure that we give families everything they need to recover"}';
+var obj = JSON.parse(s);
+document.getElementById("user2").innerHTML =obj.author;
+document.getElementById("read2").innerHTML =obj.text;
+</script>
+
+         </div> 
+      </div>
+
+<div class="cell">
+         <img src="images/gallery-item-2-big.jpg" class="responsive-image">
+       <div class="border" style="width:262px;left:10.5%;height:60px">
+        <img class="image_title" src="images/home-img-5.jpg" height="42px" width="42px"><p class="image_holder" id="user3"></p>
+         <div class="tex" id="read3"></div>
+         <script>
+var s = '{"author" : "Harshit jain" ,"text" : "Hey everybody - this is barack. Just finished a great rally in Charlottesville, and am looking forward to your questions. At the top, I do want to say that our thoughts and prayers are with folks who are dealing with Hurricane Isaac in the Gulf, and to let them know that we are going to be coordinating with state and local officials to make sure that we give families everything they need to recover"}';
+var obj = JSON.parse(s);
+document.getElementById("user3").innerHTML =obj.author;
+document.getElementById("read3").innerHTML =obj.text;
+</script>
+
+         </div> 
+      </div>
+
+      
     </div>
 </div>
 </div>
+
 <div class="gallery-frame">
   <div class="wrapper">
     <div class="grid" style="width:1180px">
@@ -155,7 +207,8 @@
     </div>
 </div>
 </div>
-<div class="badge-container">
+<!-- <i class="fa fa-angle-right" id="arrow" style="float:right;top:-230px;left:-220px;"></i> -->
+<div class="badge-container" id="right">
     <a onclick="showFrameIndex(0)">
       <div class="badge-item"></div>
     </a>
@@ -270,8 +323,6 @@
   </div>
 
 </section>
-
-
 <!-- <script src="js/jquery.min.js"></script>
 <script src="js/index.js"></script> -->
 <script type="text/javascript" src="scripts/jquery-1.8.2.min.js"></script>

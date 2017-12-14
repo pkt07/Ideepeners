@@ -492,24 +492,29 @@ figcaption {
 .badge-container a {
   display: inline-block;
   position: relative;
-  left:-105%;
-
+  padding: 1px;
+  top:-230px;
+  left:510px;
+  transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    
 }
 
 .badge-item {
-  width: 10px;
-  height: 10px;
-  background-color: rgb(143,51,196);
-  border-radius: 50%;
+  border: solid black;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding:5px;
+  background-color:#eee;
+
+
 }
 
 .badge-item-inactive {
-  background-color: rgb(151,151,151);
+  background-color: #eee;
 }
 
-.badge-container a:hover .badge-item{
-  background-color: rgb(173,71,226);
-}
+
 h4{
     margin-left:5%;
 }
@@ -689,7 +694,9 @@ h4{
   position: relative;
   top:-150px;
 }
-
+.arrow{
+  font-size: 3em
+}
 @media only screen and (max-width: 800px) {
   .nav-mobile {
     display: block;
@@ -782,7 +789,16 @@ article {
 
 .responsive-image {
   max-width: 100%;
-
+}
+.tex{
+  position: relative;
+  top:-350px;
+  left:2%;
+  font-weight:520;
+  font-family:'Ubuntu';
+}
+.responsive-image:hover.tex{
+visibility:visible;
 }
 
 .cell {
