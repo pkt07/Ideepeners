@@ -6,12 +6,10 @@
 <link rel="stylesheet" href="css/styles.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-
  </head> 
  <section class="navigation">
   <div class="nav-container">
- <div class="hamburger">
+ <!-- <div class="hamburger">
 	<div class="line" style="background-color: black"></div>
 	<div class="line" style="background-color: black"></div>
 	<div class="line" style="background-color: black"></div>
@@ -20,7 +18,21 @@
 	  <div class="menu-item">Home</div>
 	  <div class="menu-item">About</div>
 	  <div class="menu-item">Contact</div>
+	  <div class="menu-item">Contact</div>
+	  <div class="menu-item">Contact</div>
+	  <div class="menu-item">Contact</div>
+	  <div class="menu-item">Contact</div>
+</div> -->
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
 </div>
+
+
     <div class="brand">
    	
      <a href="#" style="margin-left:-20px;letter-spacing: -5px;">gutaloo</a>
@@ -37,7 +49,7 @@
 </section>
 
 <div class="container">
-  <div class="slider" id="slider1" style="margin-left:-8px">
+  <div class="slider" id="slider1" style="margin-left:15px">
     <!-- Slides -->
     <div style="background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/30256/1200_bodie-11.jpg)"></div>
     <div style="background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/30256/jungle.jpg)"></div>
@@ -49,10 +61,10 @@
 </div>
 
 <br>
-
+<span class="open" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
 </div>
 
-
+<div class="top_s" id="toop">
 <div class="main">
 	<p class="para" style="font-family:'Ubuntu'" id="p_id"></p>
 	<script>
@@ -220,6 +232,7 @@ document.getElementById("read3").innerHTML =obj.text;
     </a>
   </div>
 </section>  
+</div>
      <!-- <div class="cell">
           <img src="images/gallery-item-2-big.jpg" class="responsive-image">
          <div class="border" style="width:262px;left:10.5%;height:60px"><img class="image_title" src="images/home-img-5.jpg" height="42px" width="42px"><p class="image_holder">Yashwant Sinha</p></div> 
@@ -259,7 +272,7 @@ document.getElementById("read3").innerHTML =obj.text;
       </div>
     </div>
   </div> -->
-
+<div class="top_sec" id="toop1">
 <div class="main1">
 	<p class="para1" style="position:relative;top:-60px;">Stories By</p>
 	
@@ -323,8 +336,33 @@ document.getElementById("read3").innerHTML =obj.text;
   </div>
 
 </section>
+</div>
 <!-- <script src="js/jquery.min.js"></script>
 <script src="js/index.js"></script> -->
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("slider1").style.marginLeft = "250px";
+    document.getElementById("toop").style.marginLeft = "360px";
+    document.getElementById("toop1").style.marginLeft = "360px";
+    document.getElementById("p_id").style.marginLeft = "15px";
+    document.getElementByClassName("text").style.marginLeft = "180px";
+    document.getElementByClassName("para1").style.marginLeft = "350px";
+     document.getElementByClassName("dropdown-button").style.marginLeft = "350px";
+    }
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("slider1").style.marginLeft= "20px";
+    document.getElementById("toop").style.marginLeft = "0";
+    document.getElementById("toop1").style.marginLeft = "0";
+    document.getElementById("p_id").style.marginLeft = "65px";
+    document.getElementByClassName("text").style.marginLeft = "0";
+    document.getElementByClassName("para1").style.marginLeft = "10px";
+     document.getElementByClassName("dropdown-button").style.marginLeft = "10px";
+
+}
+</script>
 <script type="text/javascript" src="scripts/jquery-1.8.2.min.js"></script>
 <script src="js/index.js"></script>
     <script type="text/javascript" src="scripts/jquery.mockjax.js"></script>
