@@ -1,5 +1,6 @@
 body{
   background-color: #eee;
+  overflow-x:hidden;
 }
 .navigation {
   height: 55px;
@@ -30,7 +31,7 @@ body{
   text-decoration: none;
 }
 .nav-container {
-  max-width: 1000px;
+  width:80%;
   margin: 0 auto;
 }
 nav {
