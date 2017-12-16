@@ -6,6 +6,20 @@
 <link rel="stylesheet" href="css/styles.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+<script type="text/javascript" src="js/data.json"></script>
+	<script type="text/javascript" >
+                function load() {
+                     var mydata = JSON.parse(s);
+                     var div = document.getElementById('user');
+
+                     for(var i = 0;i < mydata.length; i++)
+                     {
+                        div.innerHTML = div.innerHTML + "<p class='inner' id="+i+">"+ mydata[i].author + myda+"</p>" + "<br>";
+
+                     }
+                 }
+        </script>
+ <!-- <script type="text/javascript" src="js/myscript.js"></script> -->
  </head> 
  <section class="navigation">
   <div class="nav-container">
@@ -61,11 +75,11 @@
 </div>
 
 <br>
-<span class="open" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+<span class="open" style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="fa fa-bars"></i></span>
 </div>
 
-<div class="top_s" id="toop">
-<div class="main">
+<div class="top_s">
+<div class="main" id="toop">
 	<p class="para" style="font-family:'Ubuntu'" id="p_id"></p>
 	<script>
 	var s = '{"first_name" : "Trending"}';
@@ -98,24 +112,17 @@
     </div> 
     </ul>
 </div> -->
-
+<body>
 <section class="gallery">
 <div class="gallery-frame">
   <div class="wrapper">
     <div class="grid" style="width:1180px">
  
-      <div class="cell">
+      <div class="cell" id="x1">
           <img src="images/gallery-item-2-big.jpg" class="responsive-image">
          <div class="border" style="width:262px;left:10.5%;height:60px">
          <img class="image_title" src="images/home-img-5.jpg" height="42px" width="42px"><p class="image_holder" id="user"></p>
          <p class="tex" id="read"></p>
-         <script>
-var s = '{"author" : "Shubham Sharma" ,"text" : "Hey everybody - this is barack. Just finished a great rally in Charlottesville, and am looking forward to your questions. At the top, I do want to say that our thoughts and prayers are with folks who are dealing with Hurricane Isaac in the Gulf, and to let them know that we are going to be coordinating with state and local officials to make sure that we give families everything they need to recover"}';
-var obj = JSON.parse(s);
-document.getElementById("user").innerHTML =obj.author;
-document.getElementById("read").innerHTML =obj.text;
-</script>
-
          </div> 
       </div>
 
@@ -125,13 +132,6 @@ document.getElementById("read").innerHTML =obj.text;
        <div class="border" style="width:262px;left:10.5%;height:60px">
         <img class="image_title" src="images/home-img-5.jpg" height="42px" width="42px"><p class="image_holder" id="user1"></p>
          <p class="tex" id="read1"></p>
-         <script>
-var s = '{"author" : "Ritvik Bhatt" ,"text" : "Hey everybody - this is barack. Just finished a great rally in Charlottesville, and am looking forward to your questions. At the top, I do want to say that our thoughts and prayers are with folks who are dealing with Hurricane Isaac in the Gulf, and to let them know that we are going to be coordinating with state and local officials to make sure that we give families everything they need to recover"}';
-var obj = JSON.parse(s);
-document.getElementById("user1").innerHTML =obj.author;
-document.getElementById("read1").innerHTML =obj.text;
-</script>
-
          </div> 
       </div>
 
@@ -141,28 +141,15 @@ document.getElementById("read1").innerHTML =obj.text;
        <div class="border" style="width:262px;left:10.5%;height:60px">
         <img class="image_title" src="images/home-img-5.jpg" height="42px" width="42px"><p class="image_holder" id="user2"></p>
          <p class="tex" id="read2"></p>
-         <script>
-var s = '{"author" : "shivansh mandloi" ,"text" : "Hey everybody - this is barack. Just finished a great rally in Charlottesville, and am looking forward to your questions. At the top, I do want to say that our thoughts and prayers are with folks who are dealing with Hurricane Isaac in the Gulf, and to let them know that we are going to be coordinating with state and local officials to make sure that we give families everything they need to recover"}';
-var obj = JSON.parse(s);
-document.getElementById("user2").innerHTML =obj.author;
-document.getElementById("read2").innerHTML =obj.text;
-</script>
 
          </div> 
       </div>
 
-<div class="cell">
+<div class="cell" id="x">
          <img src="images/gallery-item-2-big.jpg" class="responsive-image">
        <div class="border" style="width:262px;left:10.5%;height:60px">
         <img class="image_title" src="images/home-img-5.jpg" height="42px" width="42px"><p class="image_holder" id="user3"></p>
          <p class="tex" id="read3"></p>
-         <script>
-var s = '{"author" : "Harshit jain" ,"text" : "Hey everybody - this is barack. Just finished a great rally in Charlottesville, and am looking forward to your questions. At the top, I do want to say that our thoughts and prayers are with folks who are dealing with Hurricane Isaac in the Gulf, and to let them know that we are going to be coordinating with state and local officials to make sure that we give families everything they need to recover"}';
-var obj = JSON.parse(s);
-document.getElementById("user3").innerHTML =obj.author;
-document.getElementById("read3").innerHTML =obj.text;
-</script>
-
          </div> 
       </div>
 
@@ -171,54 +158,54 @@ document.getElementById("read3").innerHTML =obj.text;
 </div>
 </div>
 
-<div class="gallery-frame">
+<!-- <div class="gallery-frame">
   <div class="wrapper">
     <div class="grid" style="width:1180px">
  
-      <div class="cell">
+      <div class="cell" id="x1">
           <img src="images/gallery-item-3.jpg" class="responsive-image">
          <div class="border" style="width:262px;left:10.5%;height:60px"><img class="image_title" src="images/home-img-5.jpg" height="42px" width="42px"><p class="image_holder">Yashwant Sinha</p></div> 
       </div>
-      <div class="cell">
+      <div class="cell" id="x1">
         <img src="images/gallery-item-3.jpg" class="responsive-image">
                  <div class="border" style="width:262px;left:10.5%;height:60px"><img class="image_title" src="images/home-img-5.jpg" height="42px" width="42px"><p class="image_holder">Yashwant Sinha</p></div> 
       </div>
-      <div class="cell">
+      <div class="cell" id="x1">
         <img src="images/gallery-item-3.jpg" class="responsive-image">
                  <div class="border" style="width:262px;left:10.5%;height:60px"><img class="image_title" src="images/home-img-5.jpg" height="42px" width="42px"><p class="image_holder">Yashwant Sinha</p></div>
       </div>
-      <div class="cell">
+      <div class="cell" id="x">
         <img src="images/gallery-item-3.jpg" class="responsive-image">
                  <div class="border" style="width:262px;left:10.5%;height:60px"><img class="image_title" src="images/home-img-5.jpg" height="42px" width="42px"><p class="image_holder">Yashwant Sinha</p></div> 
 
       </div>
     </div>
 </div>
-</div>
-<div class="gallery-frame">
+</div> -->
+<!-- <div class="gallery-frame">
   <div class="wrapper">
     <div class="grid" style="width:1180px">
  
-      <div class="cell">
+      <div class="cell" id="x1">
           <img src="images/gallery-item-8-big.jpg" class="responsive-image">
          <div class="border" style="width:262px;left:10.5%;height:60px"><img class="image_title" src="images/home-img-5.jpg" height="42px" width="42px"><p class="image_holder">Yashwant Sinha</p></div> 
       </div>
-      <div class="cell">
+     <div class="cell" id="x1">
         <img src="images/gallery-item-8-big.jpg" class="responsive-image">
                  <div class="border" style="width:262px;left:10.5%;height:60px"><img class="image_title" src="images/home-img-5.jpg" height="42px" width="42px"><p class="image_holder">Yashwant Sinha</p></div> 
       </div>
-      <div class="cell">
+      <div class="cell" id="x1">
         <img src="images/gallery-item-8-big.jpg" class="responsive-image">
                  <div class="border" style="width:262px;left:10.5%;height:60px"><img class="image_title" src="images/home-img-5.jpg" height="42px" width="42px"><p class="image_holder">Yashwant Sinha</p></div>
       </div>
-      <div class="cell">
+      <div class="cell" id="x1">
         <img src="images/gallery-item-8-big.jpg" class="responsive-image">
                  <div class="border" style="width:262px;left:10.5%;height:60px"><img class="image_title" src="images/home-img-5.jpg" height="42px" width="42px"><p class="image_holder">Yashwant Sinha</p></div> 
 
       </div>
     </div>
 </div>
-</div>
+</div> -->
 <!-- <i class="fa fa-angle-right" id="arrow" style="float:right;top:-230px;left:-220px;"></i> -->
 <div class="badge-container" id="right">
     <a onclick="showFrameIndex(0)">
@@ -233,50 +220,12 @@ document.getElementById("read3").innerHTML =obj.text;
   </div>
 </section>  
 </div>
-     <!-- <div class="cell">
-          <img src="images/gallery-item-2-big.jpg" class="responsive-image">
-         <div class="border" style="width:262px;left:10.5%;height:60px"><img class="image_title" src="images/home-img-5.jpg" height="42px" width="42px"><p class="image_holder">Yashwant Sinha</p></div> 
-      </div>
-      <div class="cell">
-        <img src="images/gallery-item-2-big.jpg" class="responsive-image">
-                 <div class="border" style="width:262px;left:10.5%;height:60px"><img class="image_title" src="images/home-img-5.jpg" height="42px" width="42px"><p class="image_holder">Yashwant Sinha</p></div> 
-      </div>
-      <div class="cell">
-        <img src="images/gallery-item-2-big.jpg" class="responsive-image">
-                 <div class="border" style="width:262px;left:10.5%;height:60px"><img class="image_title" src="images/home-img-5.jpg" height="42px" width="42px"><p class="image_holder">Yashwant Sinha</p></div>
-      </div>
-      <div class="cell">
-        <img src="images/gallery-item-2-big.jpg" class="responsive-image">
-                 <div class="border" style="width:262px;left:10.5%;height:60px"><img class="image_title" src="images/home-img-5.jpg" height="42px" width="42px"><p class="image_holder">Yashwant Sinha</p></div> 
-
-      </div>
-       -->
     
-
-
-
-
-<!-- <div class="containerr">
-  <div class="grid">
-    <div class="cell">
-      <img src="images/about-img-3.jpg" height="220px" width="0px" class="responsive-image">
-    </div>
-    <div class="cell">
-     <img src="images/about-img-3.jpg" height="220px" width="262px" class="responsive-image">
-     </div>
-    <div class="cell">
-      <img src="images/about-img-3.jpg" height="220px" width="262px" class="responsive-image">
-    </div>
-    <div class="cell">
-      <img src="images/about-img-3.jpg" height="220px" width="262px" class="responsive-image">
-      </div>
-    </div>
-  </div> -->
-<div class="top_sec" id="toop1">
-<div class="main1">
+<div class="top_sec">
+<div class="main1" id="main1">
 	<p class="para1" style="position:relative;top:-60px;">Stories By</p>
 	
-	<div class='container'>
+	<div class='container' id="contain">
   <div class='dropdown' id='icecream-dropdown'>
   <div class='dropdown-button' style="font-weight:bold">Please Select</div>
   <span class='triangle'>&#9660;</span>
@@ -288,32 +237,14 @@ document.getElementById("read3").innerHTML =obj.text;
 </div>
 
 </div>
-
-	<!-- <p class="text2">Chhose More Categories<i class="fa fa-plus" style="font-weight:200"></i></p> -->
-	<p class="more" style="position: relative;top:-150px;">More<i class="fa fa-angle-right"></i></p>
 </div>
+
+	<p class="more" style="position: relative;top:-150px;">More<i class="fa fa-angle-right"></i></p>
 <br>
-<section class="gallery" style="position: relative;top:-140px;">
+<section class="gallery" style="position: relative;top:-140px;" id="toop1">
   <div class="wrapper" style="position: relative;left:35px">
     <div class="grid" style="width:1180px">
  
-      <div class="cell">
-          <img src="images/gallery-item-2-big.jpg" class="responsive-image">
-         <div class="border" style="width:262px;left:10.5%;height:60px"><img class="image_title" src="images/home-img-5.jpg" height="42px" width="42px"><p class="image_holder">Yashwant Sinha</p></div> 
-      </div>
-      <div class="cell">
-        <img src="images/gallery-item-2-big.jpg" class="responsive-image">
-                 <div class="border" style="width:262px;left:10.5%;height:60px"><img class="image_title" src="images/home-img-5.jpg" height="42px" width="42px"><p class="image_holder">Yashwant Sinha</p></div> 
-      </div>
-      <div class="cell">
-        <img src="images/gallery-item-2-big.jpg" class="responsive-image">
-                 <div class="border" style="width:262px;left:10.5%;height:60px"><img class="image_title" src="images/home-img-5.jpg" height="42px" width="42px"><p class="image_holder">Yashwant Sinha</p></div>
-      </div>
-      <div class="cell">
-        <img src="images/gallery-item-2-big.jpg" class="responsive-image">
-                 <div class="border" style="width:262px;left:10.5%;height:60px"><img class="image_title" src="images/home-img-5.jpg" height="42px" width="42px"><p class="image_holder">Yashwant Sinha</p></div> 
-
-      </div>
      <div class="cell">
           <img src="images/gallery-item-2-big.jpg" class="responsive-image">
          <div class="border" style="width:262px;left:10.5%;height:60px"><img class="image_title" src="images/home-img-5.jpg" height="42px" width="42px"><p class="image_holder">Yashwant Sinha</p></div> 
@@ -326,7 +257,24 @@ document.getElementById("read3").innerHTML =obj.text;
         <img src="images/gallery-item-2-big.jpg" class="responsive-image">
                  <div class="border" style="width:262px;left:10.5%;height:60px"><img class="image_title" src="images/home-img-5.jpg" height="42px" width="42px"><p class="image_holder">Yashwant Sinha</p></div>
       </div>
+      <div class="cell" id="xx">
+        <img src="images/gallery-item-2-big.jpg" class="responsive-image">
+                 <div class="border" style="width:262px;left:10.5%;height:60px"><img class="image_title" src="images/home-img-5.jpg" height="42px" width="42px"><p class="image_holder">Yashwant Sinha</p></div> 
+
+      </div>
+    <div class="cell">
+          <img src="images/gallery-item-2-big.jpg" class="responsive-image">
+         <div class="border" style="width:262px;left:10.5%;height:60px"><img class="image_title" src="images/home-img-5.jpg" height="42px" width="42px"><p class="image_holder">Yashwant Sinha</p></div> 
+      </div>
       <div class="cell">
+        <img src="images/gallery-item-2-big.jpg" class="responsive-image">
+                 <div class="border" style="width:262px;left:10.5%;height:60px"><img class="image_title" src="images/home-img-5.jpg" height="42px" width="42px"><p class="image_holder">Yashwant Sinha</p></div> 
+      </div>
+      <div class="cell">
+        <img src="images/gallery-item-2-big.jpg" class="responsive-image">
+                 <div class="border" style="width:262px;left:10.5%;height:60px"><img class="image_title" src="images/home-img-5.jpg" height="42px" width="42px"><p class="image_holder">Yashwant Sinha</p></div>
+      </div>
+      <div class="cell" id="xxx">
         <img src="images/gallery-item-2-big.jpg" class="responsive-image">
                  <div class="border" style="width:262px;left:10.5%;height:60px"><img class="image_title" src="images/home-img-5.jpg" height="42px" width="42px"><p class="image_holder">Yashwant Sinha</p></div> 
 
@@ -343,23 +291,36 @@ document.getElementById("read3").innerHTML =obj.text;
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
     document.getElementById("slider1").style.marginLeft = "250px";
-    document.getElementById("toop").style.marginLeft = "360px";
-    document.getElementById("toop1").style.marginLeft = "360px";
+    document.getElementById("toop").style.marginLeft = "250px";
+    document.getElementById("x1").style.marginLeft = "230px";
+    document.getElementById("x").style.visibility = "hidden";
+    document.getElementById("right").style.marginTop = "-320px";
     document.getElementById("p_id").style.marginLeft = "15px";
-    document.getElementByClassName("text").style.marginLeft = "180px";
-    document.getElementByClassName("para1").style.marginLeft = "350px";
-     document.getElementByClassName("dropdown-button").style.marginLeft = "350px";
+    document.getElementById("main1").style.marginLeft = "220px";
+    document.getElementById("contain").style.marginLeft = "180px";
+     document.getElementById("toop1").style.marginLeft = "220px";
+     document.getElementById("xx").style.visibility = "hidden";
+     document.getElementById("xxx").style.visibility = "hidden";
+    // document.getElementByClassName("para1").style.marginRight = "-200px";
+    // document.getElementByClassName("dropdown-button").style.marginLeft = "350px";
     }
 
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("slider1").style.marginLeft= "20px";
     document.getElementById("toop").style.marginLeft = "0";
-    document.getElementById("toop1").style.marginLeft = "0";
+    document.getElementById("x1").style.marginLeft = "20px";
+    document.getElementById("x").style.visibility = "visible";
+    document.getElementById("right").style.marginTop = "0px";
     document.getElementById("p_id").style.marginLeft = "65px";
-    document.getElementByClassName("text").style.marginLeft = "0";
-    document.getElementByClassName("para1").style.marginLeft = "10px";
-     document.getElementByClassName("dropdown-button").style.marginLeft = "10px";
+    document.getElementById("main1").style.marginLeft = "0px";
+    document.getElementById("contain").style.marginLeft = "0px";
+    document.getElementById("main1").style.marginTop = "40px";
+    document.getElementById("toop1").style.marginLeft = "0px";
+    document.getElementById("xx").style.visibility = "visible";
+    document.getElementById("xxx").style.visibility = "visible";
+    // document.getElementByClassName("para1").style.marginLeft = "10px";
+    //  document.getElementByClassName("dropdown-button").style.marginLeft = "10px";
 
 }
 </script>
@@ -370,4 +331,5 @@ function closeNav() {
     <script type="text/javascript" src="scripts/countries.js"></script>
     <script type="text/javascript" src="scripts/demo.js"></script>
   <!-- <script src="js/bootstrap.js"></script> -->
+</body>
 </html>

@@ -246,8 +246,8 @@ outline: none;
 
 .slider > ul > li {
     padding: 0;
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     list-style: none;
     float: left;
@@ -423,7 +423,7 @@ outline: none;
 header h1 {
   text-align: center;
 }
-.cell {
+.cell{
   margin: 1rem;
   display: flex;
   flex-direction: column;
