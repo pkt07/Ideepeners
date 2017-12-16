@@ -116,29 +116,29 @@
 <section class="gallery">
 <div class="gallery-frame">
   <div class="wrapper">
-    <div class="grid" style="width:1180px">
+    <div class="grid" style="width:1180px" id="x2">
  
       <div class="cell" id="x1">
           <img src="images/gallery-item-2-big.jpg" class="responsive-image">
-         <div class="border" style="width:262px;left:10.5%;height:60px">
+         <div class="border" style="width:262px;left:10.5%;height:60px" id="border">
          <img class="image_title" src="images/home-img-5.jpg" height="42px" width="42px"><p class="image_holder" id="user"></p>
          <p class="tex" id="read"></p>
          </div> 
       </div>
 
 
-     <div class="cell">
+     <div class="cell" id="x3">
          <img src="images/gallery-item-2-big.jpg" class="responsive-image">
-       <div class="border" style="width:262px;left:10.5%;height:60px">
+       <div class="border" style="width:262px;left:10.5%;height:60px" id="border1">
         <img class="image_title" src="images/home-img-5.jpg" height="42px" width="42px"><p class="image_holder" id="user1"></p>
          <p class="tex" id="read1"></p>
          </div> 
       </div>
 
 
-<div class="cell">
+<div class="cell" id="x4">
          <img src="images/gallery-item-2-big.jpg" class="responsive-image">
-       <div class="border" style="width:262px;left:10.5%;height:60px">
+       <div class="border" style="width:262px;left:10.5%;height:60px" id="border2">
         <img class="image_title" src="images/home-img-5.jpg" height="42px" width="42px"><p class="image_holder" id="user2"></p>
          <p class="tex" id="read2"></p>
 
@@ -146,8 +146,8 @@
       </div>
 
 <div class="cell" id="x">
-         <img src="images/gallery-item-2-big.jpg" class="responsive-image">
-       <div class="border" style="width:262px;left:10.5%;height:60px">
+         <img src="images/gallery-item-2-big.jpg" class="responsive-image" >
+       <div class="border" style="width:262px;left:10.5%;height:60px" id="border3">
         <img class="image_title" src="images/home-img-5.jpg" height="42px" width="42px"><p class="image_holder" id="user3"></p>
          <p class="tex" id="read3"></p>
          </div> 
@@ -293,8 +293,16 @@ function openNav() {
     document.getElementById("slider1").style.marginLeft = "250px";
     document.getElementById("toop").style.marginLeft = "250px";
     document.getElementById("x1").style.marginLeft = "230px";
+        document.getElementById("x1").style.width = "300px";
+     document.getElementById("x2").style.width = "1200px";
+     document.getElementById("x3").style.width = "300px";
+      document.getElementById("x4").style.width = "300px";
+      document.getElementById("border").style.width = "300px";
+      document.getElementById("border1").style.width = "300px";
+      document.getElementById("border2").style.width = "300px";
     document.getElementById("x").style.visibility = "hidden";
     document.getElementById("right").style.marginTop = "-320px";
+     document.getElementById("right").style.marginleft = "-150px";
     document.getElementById("p_id").style.marginLeft = "15px";
     document.getElementById("main1").style.marginLeft = "220px";
     document.getElementById("contain").style.marginLeft = "180px";
@@ -310,6 +318,15 @@ function closeNav() {
     document.getElementById("slider1").style.marginLeft= "20px";
     document.getElementById("toop").style.marginLeft = "0";
     document.getElementById("x1").style.marginLeft = "20px";
+     document.getElementById("x1").style.width = "260px";
+     document.getElementById("x2").style.width = "1160px";
+     document.getElementById("x3").style.width = "260px";
+      document.getElementById("x4").style.width = "260px";
+      document.getElementById("border").style.width = "258px";
+      document.getElementById("border1").style.width = "258px";
+      document.getElementById("border2").style.width = "258px";
+      document.getElementById("border3").style.width = "258px";
+      document.getElementById("border3").style.height = "62px";
     document.getElementById("x").style.visibility = "visible";
     document.getElementById("right").style.marginTop = "0px";
     document.getElementById("p_id").style.marginLeft = "65px";
