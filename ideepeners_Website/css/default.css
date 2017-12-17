@@ -410,3 +410,38 @@ top:-130px;
   float:right;
   left:-55px;
 }
+.side_head{
+  font-family: 'Ubuntu';
+  font-size:1.3em;
+  position: relative;
+  top:-15px;
+}
+.bord1{
+  border:1px solid #eee;
+  background-color: #fff;
+  height:35px;
+  width:255px;
+  position:relative;
+  top:-72px;
+  padding-top:15px; 
+  padding-left:85px;
+  font-size:1.6em;
+  font-family: 'Ubuntu';
+  box-shadow:1px 1px 1px #34495E;
+  /*padding-left:-20px;*/
+}
+.image1{
+  border-radius: 50%;
+  position: relative;
+  top:2px;
+  left:10px;
+  z-index: 1;
+}
+#col2{
+  position: relative;
+  top:-80px;
+}
+#col3{
+  position: relative;
+  top:-150px;
+}
