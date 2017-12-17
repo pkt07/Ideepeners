@@ -6,19 +6,6 @@
 <link rel="stylesheet" href="css/styles.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
-<script type="text/javascript" src="js/data.json"></script>
-	<script type="text/javascript" >
-                function load() {
-                     var mydata = JSON.parse(s);
-                     var div = document.getElementById('user');
-
-                     for(var i = 0;i < mydata.length; i++)
-                     {
-                        div.innerHTML = div.innerHTML + "<p class='inner' id="+i+">"+ mydata[i].author + myda+"</p>" + "<br>";
-
-                     }
-                 }
-        </script>
  <!-- <script type="text/javascript" src="js/myscript.js"></script> -->
  </head> 
  <section class="navigation">
@@ -54,7 +41,6 @@
     <nav>
 
       <input type="text" name="country" id="autocomplete-ajax" placeholder="search for stories,article"><i class="fa fa-search"></i>
-      <div id="selction-ajax"></div>
     </nav>
 <div class="publish"><center>Publish an article<i class="fa fa-pencil-square-o" style="margin-left:10px;"></i></center></div>
 <p class="top">Login/Signup</p>

@@ -1,10 +1,16 @@
+body{
+  background-color: #eee;
+  overflow-x:hidden;
+}
 .navigation {
   height: 55px;
   background: #fefefe;
   position: fixed;
   width: 100%;
-  z-index: 2;
-  box-shadow:2px 2px 2px #eee;
+  z-index: 4;
+  top:0;
+  left:0;
+  box-shadow:0px 1px 2px -1px rgba(0,0,0,.75);
 }
 .brand {
   position: fixed;
@@ -25,7 +31,7 @@
   text-decoration: none;
 }
 .nav-container {
-  max-width: 1000px;
+  width:80%;
   margin: 0 auto;
 }
 nav {
@@ -72,12 +78,12 @@ nav ul li ul li a {
 input[type=text]
 {
     width:200px;
-    margin-left:-290%;
-    margin-top:7px;
+    margin-left:-270%;
+    margin-top:5px;
     height:40px;
     border-radius:24px;
     border:1px solid #eee;
-    background-color:#efefff;
+    background-color:#ddd;
     padding:5%;
     box-sizing: border-box;
     z-index:2;
@@ -87,20 +93,46 @@ input[type=text]:focus{
     width:400px;
     margin-left:-100%;
 }
-
+.publish{
+  border:2px solid #eee;
+  width:160px;
+  height:30px;
+  position:relative;
+  left:80%;
+  top:10px;
+  padding-top:2px;
+  border-radius:24px;
+  background-color:#8E44AD;
+  color:#fefefe;
+}
 .fa{
     font-size:2em;
     margin-left:-13%;
     margin-top:4%;
 }
 #but{
-    margin-left:85%;
-    width:45px;
-    margin-top:-6%;
-    height:45px;
+    margin-left:80%;
+    width:150px;
+    margin-top:-10%;
+    height:35px;
 }
 #but:focus{
 outline: none;
+}
+#book{
+    position: relative;
+    right:-35%;
+}
+.new{
+    float:right;
+    font-size:0.7em;
+    margin-top: 1.2%;
+}
+.use{
+    border-radius: 50%;
+    margin-left:-45%;
+    padding-right:1px;
+    letter-spacing: 5px;
 }
 /* Mobile navigation */
 .nav-mobile {
@@ -113,17 +145,268 @@ outline: none;
   width: 70px;
 }
 .top{
-    margin-top:-4.2%;
-    float:right;
-    margin-right:6%;
-    font-size:1.1em;
-    font-weight:400;
-    padding-top:0.5%;
+    position: relative;
+    margin-top:-1.6%;
+    left:100%;
+    font-weight:550;
 }
-.imag{
-  margin-left:92%;
-  border-radius:50%;
-  margin-top:-10%;
-  height:45px;
-  width:45px;
+
+.container {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100%;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 55px;
+    left: 0;
+    float:left;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    box-shadow: 0px 1.5px 1.5px 2px #ccc;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #333;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #222;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+.open{
+  position: fixed;
+  margin-top:-25px;
+  z-index: 8;
+  margin-left:20px;
+  
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+@media only screen and (max-width: 800px) {
+  .nav-mobile {
+    display: block;
+  }
+  .btn-info{
+    width:100px;
+    margin-left:-5%;
+  }
+
+  nav {
+    width: 100%;
+    padding: 70px 0 15px;
+  }
+  nav ul {
+    display: none;
+  }
+  nav ul li {
+    float: none;
+  }
+  nav ul li a {
+    padding: 15px;
+    line-height: 20px;
+  }
+  nav ul li ul li a {
+    padding-left: 30px;
+  }
+  .nav-dropdown {
+    position: static;
+  }
+}
+
+#arrow{
+  top:120px;
+  font-size:5em;
+}
+
+
+@media screen and (min-width: 800px) {
+  .nav-list {
+    display: block !important;
+  }
+}
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+}
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: #333;
+  position: absolute;
+  display: block;
+  content: '';
+  transition: all 300ms ease-in-out;
+}
+#nav-toggle span:before {
+  top: -10px;
+}
+#nav-toggle span:after {
+  bottom: -10px;
+}
+#nav-toggle.active span {
+  background-color:#333;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+article {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.grid {
+  background: white;
+  margin: 0 0 20px 0;
+  position: relative;
+  top:20px;
+}
+.grid:after {
+  /* Or @extend clearfix */
+  content: "";
+  display: table;
+  clear: both;
+}
+[class*='col-'] {
+  float: left;
+  padding-right: 20px;
+}
+.grid [class*='col-']:last-of-type {
+  padding-right: 0;
+}
+.col-2-3 {
+  width: 62.66%;
+
+}
+.col-1-3 {
+  width: 33.33%;
+}
+.col-1-2 {
+  width: 50%;
+}
+.col-1-4 {
+  width: 25%;
+}
+.col-1-8 {
+  width: 12.5%;
+}
+.module {
+  padding: 20px;
+  background: #efefef;
+}
+/* Opt-in outside padding */
+.grid-pad {
+  padding: 20px 0 20px 20px;
+
+}
+.grid-pad [class*='col-']:last-of-type {
+  padding-right: 25px;
+}
+body {
+  padding: 10px 50px 200px;
+  background-color:#efefef;
+}
+.heading{
+  font-family: 'Ubuntu';
+ 
+  font-size:2.3em;
+  position: relative;
+  top:-40px;
+}
+.text{
+  position: relative;
+  top:-70px;
+  font-family: 'Ubuntu';
+  font-weight: 400;
+}
+.text1{
+  position: relative;
+  top:-60px;
+  font-family: 'Ubuntu';
+  font-size: 1.3em;
+  word-spacing: 7px;
+}
+.image_container{
+height:450px;
+width:680px;
+position: relative;
+top:-130px;
+}
+.bord{
+  border:1px solid #eee;
+  background-color: #fff;
+  height:35px;
+  width:635px;
+  position:relative;
+  left:-20px;
+  top:-190px;
+  padding-top:15px; 
+  padding-left:85px;
+  font-size:1.6em;
+  font-family: 'Ubuntu';
+  /*padding-left:-20px;*/
+}
+.image{
+  border-radius: 50%;
+  position: relative;
+  top:-112px;
+  z-index: 1;
+}
+.fa-bookmark-o{
+  position: relative;
+  top:-282px;
+  float:right;
+  left:-105px;
+}
+.fa-thumbs-o-down{
+  position: relative;
+  top:-282px;
+  float:right;
+  left:-10px;
+}
+.fa-thumbs-o-up{
+  position: relative;
+  top:-282px;
+  float:right;
+  left:-155px;
+  }
+.fa-share-alt{
+  position: relative;
+  top:-282px;
+  float:right;
+  left:-55px;
 }
