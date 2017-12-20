@@ -7,7 +7,7 @@
       {
         slidePause: 3000,
         fadeSpeed: 750,
-        autoPlay: "on",
+        autoPlay: "off",
         showArrows: "off", 
         hideDots: "off", 
         hoverZoom: "on",
@@ -200,21 +200,21 @@ window.onclick = function(event) {
 }
 
 
-function showFrameIndex(index) {
-  var frames = document.getElementsByClassName('gallery-frame');
-  var badges = document.getElementsByClassName('badge-item');
-  var i;
+// function showFrameIndex(index) {
+//   var frames = document.getElementsByClassName('gallery-frame');
+//   var badges = document.getElementsByClassName('badge-item');
+//   var i;
   
-  for (i = 0; i < frames.length; i++) {
-    frames[i].style.display = 'none';
-  }
-  frames[index].style.display = 'flex';
+//   for (i = 0; i < frames.length; i++) {
+//     frames[i].style.display = 'none';
+//   }
+//   frames[index].style.display = 'flex';
   
-  for (i = 0; i < badges.length; i++) {
-    badges[i].className = 'badge-item badge-item-inactive';
-  }
-  badges[index].className = 'badge-item';
-}
+//   for (i = 0; i < badges.length; i++) {
+//     badges[i].className = 'badge-item badge-item-inactive';
+//   }
+//   badges[index].className = 'badge-item';
+// }
 
-var displayIndexFrame = 0;
-showFrameIndex(displayIndexFrame);
+// var displayIndexFrame = 0;
+// showFrameIndex(displayIndexFrame);

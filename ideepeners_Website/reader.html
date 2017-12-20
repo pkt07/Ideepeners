@@ -6,31 +6,85 @@
 <link rel="stylesheet" href="css/styles.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
- <!-- <script type="text/javascript" src="js/myscript.js"></script> -->
+ <script type="text/javascript" src="js/article_json.json"></script>
+ <script type="text/javascript">
+    function load() {
+    var mydata = JSON.parse(s);
+    console.log("hello");
+
+    var first_div = document.getElementsByClassName("grid grid-pad");
+    newDiv = document.createElement('div');
+    var div_internal_1 = first_div[0].appendChild(newDiv);
+    div_internal_1.classList.add("col-2-3");
+
+
+    div_internal_2 = document.getElementsByClassName("col-2-3");
+    newDiv= document.createElement('div');
+    var div_internal_1 = div_internal_2[0].appendChild(newDiv);
+    div_internal_1.classList.add("module");
+
+    div_internal_1.innerHTML = div_internal_1.innerHTML + "<h3 class ='heading'" + ">" + mydata[0].heading +"</h3>"+ "<p class='text' " + ">" + "A text by " + mydata[0].Author +  " by " + mydata[0].Channel +" Design on 24 August " + "</p>" + mydata[0].Content;
+}
+</script>
+<script type="text/javascript" src="js/recommendation_json.json"></script>
+<script type="text/javascript">
+ function load1() {
+    var mydata1 = JSON.parse(x);
+    console.log("hello");
+
+    var first_div = document.getElementsByClassName("grid grid-pad");
+    newDiv = document.createElement('div');
+    var div_internal = first_div[0].appendChild(newDiv);
+    div_internal.classList.add("col-1-3");
+
+    for(var i = 0;i < mydata1.length; i++)
+    {   
+       var first_div = document.getElementsByClassName("col-1-3");
+        newDiv = document.createElement('div');
+        var div_internal = first_div[0].appendChild(newDiv);
+        div_internal.classList.add("internal_module");
+
+         src = mydata1[i].image;
+         img=document.getElementsByClassName('internal_module');
+         img = document.createElement('img');
+         img.src = src;
+         img.classList.add('side_image');
+         div_internal.appendChild(img);
+         document.getElementsByClassName("side_image")[i].setAttribute("height","220px");
+
+        var first_div = document.getElementsByClassName("internal_module");
+        newDiv_2 = document.createElement('div');
+        var div_internal_1 = first_div[i].appendChild(newDiv_2);
+        div_internal_1.classList.add("border");
+
+         src = mydata1[i].image;
+         img=document.getElementsByClassName('border');
+         img = document.createElement('img');
+         img.src = src;
+         img.classList.add('image1');
+         div_internal_1.appendChild(img);
+         document.getElementsByClassName("image1")[i].setAttribute("height","40px");
+         document.getElementsByClassName("image1")[i].setAttribute("width","40px");
+
+         div_internal_1.innerHTML = div_internal_1.innerHTML + "<p class ='bord1'" + ">" +mydata1[i].author +"</p>";
+         document.getElementsByClassName("bord1")[i].setAttribute("width","352px");
+     }
+
+}
+   </script>     
+
  </head> 
  <section class="navigation">
   <div class="nav-container">
- <!-- <div class="hamburger">
-  <div class="line" style="background-color: black"></div>
-  <div class="line" style="background-color: black"></div>
-  <div class="line" style="background-color: black"></div>
-</div>
-<div class="menu">
-    <div class="menu-item">Home</div>
-    <div class="menu-item">About</div>
-    <div class="menu-item">Contact</div>
-    <div class="menu-item">Contact</div>
-    <div class="menu-item">Contact</div>
-    <div class="menu-item">Contact</div>
-    <div class="menu-item">Contact</div>
-</div> -->
 
 <div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">About</a>
-  <a href="#">Services</a>
-  <a href="#">Clients</a>
-  <a href="#">Contact</a>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="text-decoration: none">&times;</a>
+  <a href="#" class="tag">Home</a>
+  <a href="#" class="tag">Trending</a>
+  <a href="#" class="tag">Latest</a>
+  <a href="#" class="tag">Contact</a>
+  <a href="#" class="tag">Bookmark</a>
+  <a href="#" class="tag">History</a>
 </div>
 
 
@@ -47,68 +101,16 @@
 
   </div>
 </section>
-<br>
+
 <span class="open" style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="fa fa-bars"></i></span>
 
 
-
 <div class="grid grid-pad">
-   <div class="col-2-3">
-     <div class="module">
-        <h3 class="heading">Lorem ipsum dollar sit amet</h3>
-        <p class="text">A text by <span style="color:#8E44AD">Amit Shah</span> on <span style="color:#8E44AD">UI/UX </span>Design on <span style="color:#8E44AD">24 August</span></p>
-
-        <p class="text1">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
-        </p>
-        <br>
-        <p class="text1" style="position: relative;top:-100px;">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
-        </p>
-        <br>
-        <p class="text1" style="position: relative;top:-130px;">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
-        </p>
-        <br>
-        <img class="image_container" src="images/gallery-item-1-big.jpg">
-         <br>
-        <p class="text1" style="position: relative;top:-130px;">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
-        </p>
-         <br>
-        <p class="text1" style="position: relative;top:-170px;">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.
-        </p>
-        <div class="border">
-        <img class="image" src="images/home-img-6.jpg" height="40px" width="40px">
-        <p class="bord">Amit Shah</p>
-        <i class="fa fa-thumbs-o-up fa-2x"></i><i class="fa fa-bookmark-o fa-2x"></i><i class="fa fa-share-alt fa-2x"></i><i class="fa fa-thumbs-o-down fa-2x"></i>
-        </div>
-     </div>
-   </div>
-   <div class="col-1-3">
-     <div class="module">
-        <h3 class="side_head">Trending Blogs</h3>
-        <img class="side_image" src="images/home-img-5.jpg" height="220px" width="342px">
-        <div class="border">
-        <img class="image1" src="images/home-img-6.jpg" height="40px" width="40px">
-        <p class="bord1">Amit Shah</p>
-        </div>
-     </div>
-   </div>
-   <div class="col-1-3" id="col2">
-      <div class="module">
-        <img class="side_image" src="images/home-img-5.jpg" height="220px" width="342px">
-        <div class="border">
-        <img class="image1" src="images/home-img-6.jpg" height="40px" width="40px">
-        <p class="bord1">Amit Shah</p>
-        </div>
-     </div>
-   </div>
-   <div class="col-1-3" id="col3">
-      <div class="module">
-        <img class="side_image" src="images/home-img-5.jpg" height="220px" width="342px">
-        <div class="border">
-        <img class="image1" src="images/home-img-6.jpg" height="40px" width="40px">
-        <p class="bord1">Amit Shah</p>
-        </div>
-     </div>
-   </div>
+<script type="text/javascript">
+  load();
+</script>
+<h3 class="side_head">Trending Blog</h3>
+<script type="text/javascript">load1()</script>
 </div>
 
 

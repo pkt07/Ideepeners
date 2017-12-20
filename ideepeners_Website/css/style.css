@@ -316,12 +316,12 @@ outline: none;
 }
 .para{
     margin-left:5.4%;
-    margin-top:3%;
     font-size:1.4em;
+    font-family: 'Ubuntu';
 }
 .text{
-    margin-top:-4%;
-    margin-left:13%;
+    position: relative;
+    left:15%;
     border:1px solid #eee;
     background-color:#ddd;
     width:180px;
@@ -337,7 +337,6 @@ outline: none;
     left:5.1%;
    font-size:1.8em;
    font-family: 'Ubuntu';
-
 }
 .text1{
     margin-top:-3.2%;
@@ -388,13 +387,22 @@ outline: none;
     float:right;
     position: relative;
     right:3.5%;
-    margin-top:-4%; 
+    top:-30px; 
+    font-size:1.6em;
+    font-family: 'Ubuntu';
+}
+#more{
+    float:right;
+    position: relative;
+    right:3.5%;
+    top:-100px;
     font-size:1.6em;
     font-family: 'Ubuntu';
 }
 .fa-angle-right{
     position: relative;
     margin: 2px 10px auto;
+
     
 }
 .btn-warning{
@@ -425,7 +433,6 @@ header h1 {
 }
 .cell{
   margin: 1rem;
-  display: flex;
   flex-direction: column;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
@@ -443,7 +450,7 @@ header h1 {
   left:35%;
   font-weight: bold;
   font-family:'Ubuntu';
-  top:-75%; 
+  top:-55px; 
 
 }
 @media screen and (min-width: 480px) {
@@ -575,8 +582,8 @@ h4{
   position:relative;
   cursor:pointer;
   transition:background .3s ease;
-  top:-140px;
-  left:-205%;
+  top:40px;
+  left:210px;
   border:1px solid #333;
 }
 .dropdown-button:hover {
@@ -587,9 +594,9 @@ h4{
   font-size:70%;
   position:absolute;
   right:18px;
-  top:-128px;
+  top:53px;
   bottom:0;
-  left:-122%;
+  left:340px;
   height:5px;
   color:#333;
 }
@@ -598,8 +605,9 @@ h4{
   transition:all .3s ease;
   transform:scaleY(1);
   color:#333;
-  top:-160px;
-  left:-200%;
+  top:35px;
+  left:220px;
+
 }
 .dropdown ul {
   visibility:hidden;
@@ -613,7 +621,7 @@ h4{
   position:absolute;
   left:0;
   margin-top:2px;
-  top:100%;
+  top:30px;
   min-width:90%;
   transition:all .3s ease;
 }
@@ -675,17 +683,32 @@ h4{
     box-shadow: 0px 1.5px 1.5px 2px #ccc;
 }
 
-.sidenav a {
+.sidenav .tag {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
     color: #333;
     display: block;
     transition: 0.3s;
+    border:1px solid #eee; 
+}
+.sidenav a{
+  color:#333;
+  font-family: 'Ubuntu';
+  
+
 }
 
 .sidenav a:hover {
     color: #222;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.2);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.5);
+    transition: all 200ms ease-in;
+    transform: scale(1.2);
 }
 
 .sidenav .closebtn {
@@ -697,80 +720,22 @@ h4{
 }
 .open{
   position: fixed;
-  margin-top:-255px;
+  top:10px;
   z-index: 8;
-  margin-left:-1190px;
+  margin-left:55px;
   
+}
+#arrow-right{
+  position: relative;
+  float:right;
+  top:-100px;
+  left:-25px;
 }
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
-/*.hamburger {
-  position:absolute;
-  z-index: 2;
-  cursor: pointer;
-  }
 
-.line {
-  width: 30px;
-  height: 4px;
-  background: black;
-  margin-bottom: 3px;
-  position: relative;
-  left:-290%;
-  top:20px;
-}
-
-.menu {
-  width: 150px;
-  height:100%;
-  background: #fff;
-  position: fixed;
-  top:55px;
-  left: -320px;
-  transition: left .1s;
-}
-
-.menu-item:first-child {
-  margin-top: 120px;
-  color:black;
-}
-
-.menu--open {
-  left: 0;
-}
-
-.menu-item {
-  color: #333;
-  width: 100%;
-  padding: 1rem 3rem;
-  font-weight:bold;
-  box-sizing: border-box;
-}
-.menu-item:hover {
-  background: #91966E;
-  cursor: pointer;
-}*/
-.image_first{
-  position: relative;
-  top:5px;
-}
-.image_sec{
-  position:relative;
-  top:-50px;
-}
-.image_third{
-  position: relative;
-  top:-100px;
-}
-.image_fourth{
-  position: relative;
-  top:-150px;
-}
-.arrow{
-  font-size: 3em
-}
 @media only screen and (max-width: 800px) {
   .nav-mobile {
     display: block;
@@ -863,16 +828,18 @@ article {
 
 .responsive-image {
   max-width: 100%;
+  height:300px;
 }
 .responsive-image:hover{
   opacity: 0.1;
 }
 .tex{
   position: relative;
-  top:-350px;
+  top:-370px;
   left:2%;
   font-weight:520;
   font-family:'Ubuntu';
+
 }
 .responsive-image:hover.tex{
 visibility:visible;
@@ -883,12 +850,17 @@ visibility:visible;
   }
 .cell .tex{
 display:none;
+height:250px;
 }
 .cell:hover .tex{
   display: block;
+  height:0px;
 }
 .cell img {
   display:block;
+}
+.grid{
+  width: 1180px;
 }
 /* tablet */
 @media screen and (min-width: 600px) {
@@ -926,7 +898,7 @@ https://www.taniarascia.com/how-to-build-a-responsive-image-gallery-with-flexbox
   }
   .border{
     border:1px solid #ccc;
-    width:220px;
+    width:260px;
     background-color:#ccc;
     left:12%;
   }
