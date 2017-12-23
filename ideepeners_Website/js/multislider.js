@@ -250,59 +250,59 @@
         // ==== ANIMATION FUNCTIONS ====
         // =============================
         
-        function allLeft(){
-            isItAnimating(function(){
-                reTargetSlides();
-                calcNumSlidesToMove();
+        // function allLeft(){
+        //     isItAnimating(function(){
+        //         reTargetSlides();
+        //         calcNumSlidesToMove();
 
-                var $clonedItemSet = $msContent.children('.item').clone();
-                var filteredClones = $clonedItemSet.splice(0, numberVisibleSlides);
+        //         var $clonedItemSet = $msContent.children('.item').clone();
+        //         var filteredClones = $clonedItemSet.splice(0, numberVisibleSlides);
 
-                $msContent.append(filteredClones);
+        //         $msContent.append(filteredClones);
 
-                $imgFirst.animate(
-                    {marginLeft: -totalWidth}, {
-                        duration: animateDuration,
-                        easing: "swing",
-                        complete: function(){
-                            $($msContent.children('.item').splice(0,numberVisibleSlides)).remove();
-                            doneAnimating();
-                        }
-                    }
-                );
-            });
-        }
+        //         $imgFirst.animate(
+        //             {marginLeft: -totalWidth}, {
+        //                 duration: animateDuration,
+        //                 easing: "swing",
+        //                 complete: function(){
+        //                     $($msContent.children('.item').splice(0,numberVisibleSlides)).remove();
+        //                     doneAnimating();
+        //                 }
+        //             }
+        //         );
+        //     });
+        // }
 
-        function allRight() {
-            isItAnimating(function(){
-                reTargetSlides();
-                calcNumSlidesToMove();
+        // function allRight() {
+        //     isItAnimating(function(){
+        //         reTargetSlides();
+        //         calcNumSlidesToMove();
 
-                var numberTotalSlides = $msContent.children('.item').length;
-                var $clonedItemSet = $msContent.children('.item').clone();
-                var filteredClones = $clonedItemSet.splice(numberTotalSlides-numberVisibleSlides,numberTotalSlides);
+        //         var numberTotalSlides = $msContent.children('.item').length;
+        //         var $clonedItemSet = $msContent.children('.item').clone();
+        //         var filteredClones = $clonedItemSet.splice(numberTotalSlides-numberVisibleSlides,numberTotalSlides);
 
-                $($(filteredClones)[0]).css('margin-left',-totalWidth); // give clone array negative margin before preppending
-                $msContent.prepend(filteredClones);
+        //         $($(filteredClones)[0]).css('margin-left',-totalWidth); // give clone array negative margin before preppending
+        //         $msContent.prepend(filteredClones);
 
-                reTargetSlides();
+        //         reTargetSlides();
 
-                $imgFirst.animate(
-                    {
-                        marginLeft: 0
-                    }, {
-                        duration: animateDuration,
-                        easing: "swing",
-                        complete: function(){
-                            numberTotalSlides = $msContent.find('.item').length;
-                            $($msContent.find('.item').splice(numberTotalSlides-numberVisibleSlides,numberTotalSlides)).remove();
-                            $imgFirst.removeAttr('style');
-                            doneAnimating();
-                        }
-                    }
-                );
-            });
-        }
+        //         $imgFirst.animate(
+        //             {
+        //                 marginLeft: 0
+        //             }, {
+        //                 duration: animateDuration,
+        //                 easing: "swing",
+        //                 complete: function(){
+        //                     numberTotalSlides = $msContent.find('.item').length;
+        //                     $($msContent.find('.item').splice(numberTotalSlides-numberVisibleSlides,numberTotalSlides)).remove();
+        //                     $imgFirst.removeAttr('style');
+        //                     doneAnimating();
+        //                 }
+        //             }
+        //         );
+        //     });
+        // }
 
         function singleLeft(){
             isItAnimating(function(){
@@ -340,6 +340,6 @@
                 );
             });
         }
-    return $multislider;
+    //return $multislider;
     }
 })(jQuery);

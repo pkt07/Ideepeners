@@ -150,26 +150,23 @@ outline: none;
     left:100%;
     font-weight:550;
 }
-
 .slider, 
 .slider > div {
     /* Images default to Center Center. Maybe try 'center top'? */
     background-position: center center;
     display: block;
-    width: 1150px;
+    width: 1100px;
     height: 500px;
     /* height: 100vh; *//* If you want fullscreen */
     position: relative;
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: #eee;
+    background-color: #000;
     overflow: hidden;
     -moz-transition: transform .4s;
     -o-transition: transform .4s;
     -webkit-transition: transform .4s;
     transition: transform .4s;
-    position:relative;
-    top:12%;
 }
 
 .slider > div {
@@ -289,12 +286,6 @@ outline: none;
     right: 0;
 }
 
-.slider:hover .titleBar,
-.slider:hover .titleBar * {
-    transform: translate(0);
-    opacity: 1;
-}
-
 
 .slider > div span {
     display: block;
@@ -325,6 +316,306 @@ outline: none;
         transform: scale(1);
     }
 }
+
+/* -------------------------------------- */
+
+#slider2 {
+    max-width: 30%;
+    margin-right: 20px;
+}
+
+.row2Wrap {
+    display: flex;
+}
+
+.content {
+    padding: 50px;
+    margin-bottom: 100px;
+}
+
+.para{
+    margin-left:5.4%;
+    font-size:1.4em;
+    font-family: 'Ubuntu';
+}
+.text{
+    position: relative;
+    left:15%;
+    border:1px solid #eee;
+    background-color:#ddd;
+    width:180px;
+    height:32px;
+    padding-left:2%;
+    border-radius:18px;
+    font-weight:100;
+    font-size:1em;
+    font-family:'Ubuntu';
+}
+.para1{
+    position: relative;
+    left:5.1%;
+   font-size:1.8em;
+   font-family: 'Ubuntu';
+}
+.text1{
+    margin-top:-3.2%;
+    margin-left:15%;
+    border:1px solid #eee;
+    background-color:#ddd;
+    width:150px;
+    height:30px;
+    padding-left:2%;
+    padding-top:0.2%;
+    padding-bottom: 1%;
+    border-radius:18px;
+    font-weight:400;
+    font-size:1.2em;
+}
+.text2{
+    position: relative;
+    top:2px;
+    margin-top:-40px;
+    margin-left:33%;
+    border:1px solid #eee;
+    background-color:#ddd;
+    width:260px;
+    height:30px;
+    padding-left:2%;
+    border-radius:18px;
+    font-weight:500;
+    font-size:1.2em;
+}
+.fa-plus{
+    position: relative;
+    margin-left: 10%;
+    font-size:1.3em;
+    font-weight:bold;
+}
+.fa-angle-down{
+    position: relative;
+    margin-left: 10%;
+    font-size:1.3em;
+    font-weight:bold;
+}
+.fa-pencil{
+    position: relative;
+    margin-left: 10%;
+    font-size:1.2em;
+}
+.more{
+    float:right;
+    position: relative;
+    right:3.5%;
+    top:-30px; 
+    font-size:1.6em;
+    font-family: 'Ubuntu';
+}
+#more{
+    float:right;
+    position: relative;
+    right:3.5%;
+    top:-100px;
+    font-size:1.6em;
+    font-family: 'Ubuntu';
+}
+.fa-angle-right{
+    position: relative;
+    margin: 2px 10px auto;
+
+    
+}
+.btn-warning{
+    width:300px;
+    margin-top:-18%;
+    height:50px;
+
+}
+#over{
+    margin-top:0%;
+    margin-left:-1%;
+}
+
+header h1 {
+  text-align: center;
+}
+
+@media screen and (min-width: 480px) {
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .cell {
+    width: calc((100% / 2) - 2rem);
+  }
+  .slider, 
+.slider > div {
+    /* Images default to Center Center. Maybe try 'center top'? */
+    display: block;
+    width: 1200px;
+    height: 500px;
+    position:relative;
+    margin-left:50px;
+    /* height: 100vh; *//* If you want fullscreen */
+    position: relative;
+    top:15%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #eee;
+    overflow: hidden;
+    -moz-transition: transform .4s;
+    -o-transition: transform .4s;
+    -webkit-transition: transform .4s;
+    transition: transform .4s;
+}
+}
+@media screen and (min-width: 670px) {
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .cell {
+    width: calc((100% / 3) - 2rem);
+  }
+  .slider, 
+.slider > div {
+    /* Images default to Center Center. Maybe try 'center top'? */
+    display: block;
+    width: 1200px;
+    height: 500px;
+    position:relative;
+    margin-left:10px;
+    /* height: 100vh; *//* If you want fullscreen */
+    position: relative;
+    top:15%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #eee;
+    overflow: hidden;
+    -moz-transition: transform .4s;
+    -o-transition: transform .4s;
+    -webkit-transition: transform .4s;
+    transition: transform .4s;
+}
+}
+h4{
+    margin-left:5%;
+}
+.fa-user-o{
+    margin-left:-50%;
+    letter-spacing: 15px;
+}
+
+.container {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100%;
+}
+.dropdown {
+  display:inline-block;
+  font-family:arial;
+  position:relative;
+  margin:15px;
+  font-size:16px;
+}
+.dropdown-button {
+  background:#ccc;
+  min-width:160px;
+  color:#333;
+  letter-spacing:0.025rem;
+  box-sizing:border-box;
+  padding:10px 30px 10px 20px;
+  border-radius:24px;
+  position:relative;
+  cursor:pointer;
+  transition:background .3s ease;
+  top:40px;
+  left:210px;
+  border:1px solid #333;
+}
+.dropdown-button:hover {
+  background:#eee;
+  transition:background .3s ease;
+}
+.triangle {
+  font-size:70%;
+  position:absolute;
+  right:18px;
+  top:53px;
+  bottom:0;
+  left:340px;
+  height:5px;
+  color:#333;
+}
+.dropdown ul.active {
+  visibility:visible;
+  transition:all .3s ease;
+  transform:scaleY(1);
+  color:#333;
+  top:35px;
+  left:220px;
+
+}
+.dropdown ul {
+  visibility:hidden;
+  overflow:hidden;
+  color:#fff;
+  transform-origin:top;
+  padding:0;
+  list-style:none;
+  transform:scaleY(0);
+  box-shadow:0px 2px 6px 0 rgba(0,0,0,0.2);
+  position:absolute;
+  left:0;
+  margin-top:2px;
+  top:30px;
+  min-width:90%;
+  transition:all .3s ease;
+}
+.dropdown li {
+  background:#fff;
+  padding:8px 10px 8px 15px;
+  box-sizing:border-box;
+  cursor:pointer;
+  font-weight: bold;
+  transition:background .2s ease;
+  position:relative;
+}
+.dropdown li.check {
+  background:#f6f6f6;
+}
+.dropdown li.check:after {
+  content:'';
+  position:absolute;
+  height:15px;
+  width:3px;
+  background:#ccc;
+  top:50px;
+  bottom:0;
+  margin-top:auto;
+  transform:rotate(40deg);
+  margin-bottom:auto;
+  right:15px;
+}
+.dropdown li.check:before {
+  content:'';
+  position:absolute;
+  height:3px;
+  width:9px;
+  background:#ccc;
+  top:0;
+  bottom:0;
+  margin-top:auto;
+  transform:rotate(40deg);
+  margin-bottom:auto;
+  right:19px;
+}
+.dropdown li:hover {
+  background:#f6f6f6;
+  transition:background .2s ease;
+}
+
 .sidenav {
     height: 100%;
     width: 0;
@@ -382,6 +673,103 @@ outline: none;
   margin-left:55px;
   
 }
+#arrow-right{
+  position: relative;
+  float:right;
+  top:-100px;
+  left:-25px;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+@media only screen and (max-width: 800px) {
+  .nav-mobile {
+    display: block;
+  }
+  .btn-info{
+    width:100px;
+    margin-left:-5%;
+  }
+
+  nav {
+    width: 100%;
+    padding: 70px 0 15px;
+  }
+  nav ul {
+    display: none;
+  }
+  nav ul li {
+    float: none;
+  }
+  nav ul li a {
+    padding: 15px;
+    line-height: 20px;
+  }
+  nav ul li ul li a {
+    padding-left: 30px;
+  }
+  .nav-dropdown {
+    position: static;
+  }
+}
+
+#arrow{
+  top:120px;
+  font-size:5em;
+}
+
+
+@media screen and (min-width: 800px) {
+  .nav-list {
+    display: block !important;
+  }
+}
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+}
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: #333;
+  position: absolute;
+  display: block;
+  content: '';
+  transition: all 300ms ease-in-out;
+}
+#nav-toggle span:before {
+  top: -10px;
+}
+#nav-toggle span:after {
+  bottom: -10px;
+}
+#nav-toggle.active span {
+  background-color:#333;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+article {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/* mobile first */
+
 .containerr { margin:150px auto;}
 #mixedSlider {
   position: relative;
@@ -552,22 +940,20 @@ transition: width 0.6s ease;
   }
 }
 #mixedSlider .MS-controls .MS-left {
-  left: 27px;
+  left: 20px;
 }
-
 @media (max-width: 767px) {
   #mixedSlider .MS-controls .MS-left {
     left: -10px;
   }
 }
 #mixedSlider .MS-controls .MS-right {
-  right: 10px;
+  right: 0px;
 }
 @media (max-width: 767px) {
   #mixedSlider .MS-controls .MS-right {
     right: -10px;
   }
 }
-
 
 

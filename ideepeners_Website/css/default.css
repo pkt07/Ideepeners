@@ -379,7 +379,14 @@ body {
 }
 .text1{
   position: relative;
-  top:-115px;
+  top:-85px;
+  font-family: 'Ubuntu';
+  font-size: 1.3em;
+  word-spacing: 7px;
+}
+.article_paragraph{
+  position: relative;
+  top:-125px;
   font-family: 'Ubuntu';
   font-size: 1.3em;
   word-spacing: 7px;
@@ -473,4 +480,10 @@ top:-130px;
 #col3{
   position: relative;
  top:-150px;
+}
+.article_heading{
+  position: relative;
+  top:-125px;
+  font-family: 'Ubuntu';
+  font-size: 2em;
 }
