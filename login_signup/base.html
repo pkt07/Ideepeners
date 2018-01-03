@@ -3,109 +3,104 @@
 <head>
 <title>IDeepeners</title>
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+<!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ --><!-- <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lucida Grande"> -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
+<!-- <script type="text/javascript" src="js/index.js"></script> -->
  </head> 
- <section id="container">
- <h1 class="head" style="font-family:'Lato';">GUTALOO</h1>
- <p class="tex">Already have an account? <b>Sign up</b></p>
- </section>
+
 <body id="main">
-
-<div class="container col-xs-12 col-sm-8 col-md-9">
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3">
-                    <div class="panel panel-login">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-6">
-                                    <a href="#" class="active" id="login-link">Login</a>
-                                </div>
-                                <div class="col-xs-6">
-                                    <a href="#" id="register-link">Register</a>
-                                </div>
-                            </div>
-                            <hr>
-                        </div>
-                        <div class="panel-body">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <form id="login-form" method="post" style="display:block;">
-                                        <div class="form-group">
-                                            <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
-                                        </div>
-                                        <div class="form-group">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="col-md-6" style="float:left;">
-                                                    <input type="checkbox" tabindex="3" class="" name="remember" id="remember">
-                                                    <label for="remember" id="remember-text">Remember me</label>
-                                                </div>
-                                                <div class="col-md-6" style="float:right;">
-                                                    <a href="#" tabindex="5" id="forgot-password">Forgot password?</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="row">
-                                                <div class="col-sm-6 col-sm-offset-3">
-                                                    <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                    <form id="register-form" method="post" style="display:none;">
-                                        <div class="form-group">
-                                            <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="row">
-                                                <div class="col-sm-6 col-sm-offset-3">
-                                                    <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Register">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-<script>$("#login-link").click(function() {
-    $("#login-form").delay(105).fadeIn(100);
-    $("#register-form").fadeOut(100);
-    $("#login-link").css("color", "#7BE5A0");
-    $("#register-link").css("color", "#4E5166");
-    $(this).addClass("active");
+<div class="upperbody">
+    <img class="top_image" src="images/logo.png" height="55px" width="127px">
+    <p class="uppertext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis pellentesque metus id lacinia. Nunc dapibus pulvinar auctor. Duis nec sem at orci commodo viverra id in ipsum. Fusce </p>
+</div>
+<div class="login-box">
+    <div class="lb-header">
+      <a href="#" class="active" id="login-box-link">Login</a>
+      <a href="#" id="signup-box-link">Sign Up</a>
+    </div>
+    <!-- <div class="social-login">
+      <a href="#">
+        <i class="fa fa-facebook fa-lg"></i>
+        Login in with facebook
+      </a>
+      <a href="#">
+        <i class="fa fa-google-plus fa-lg"></i>
+        log in with Google
+      </a>
+    </div> -->
+    <form class="email-login">
+      <div class="u-form-group">
+        <input type="email" placeholder="Email"/>
+      </div>
+      <div class="u-form-group">
+        <input type="password" placeholder="Password"/>
+      </div>
+      <div class="u-form-group">
+        <button>Log in</button>
+      </div>
+      <div class="u-form-group">
+        <a href="#" class="forgot-password">Trouble Login in?</a>
+       <input type="checkbox" class="checkbox"><a href="#" class="remember">Remember Me</a>
+      </div>
+      <div class="social-login">
+     <a href="#">
+        Login with Google
+      </a>
+    </div>
+      <div class="social-login">
+      <a href="#" style="background-color: #001447">
+        Login with facebook
+      </a>
+      </div>
+      <div class="policy">
+      <p class="text_privacy">By logging in, you agree to our <a href="#" style="text-decoration: none;">Terms & condition</a> & <a href="#" style="text-decoration: none;">Privacy </a></p>
+      </div>
+    </form>
+    <form class="email-signup">
+       <div class="u-form-group">
+        <input type="email" placeholder="Email"/>
+      </div>
+      <div class="u-form-group">
+        <input type="password" placeholder="Password"/>
+      </div>
+      <div class="u-form-group">
+        <button>Create Account</button>
+      </div>
+      <div class="u-form-group">
+        <a href="#" class="forgot-password">Trouble Login in?</a>
+       <input type="checkbox" class="checkbox"><a href="#" class="remember">Remember Me</a>
+      </div>
+      <div class="social-login">
+     <a href="#">
+        Login with Google
+      </a>
+    </div>
+      <div class="social-login">
+      <a href="#" style="background-color: #001447">
+        Login with facebook
+      </a>
+      </div>
+      <div class="policy">
+      <p class="text_privacy">By logging in, you agree to our <a href="#" style="text-decoration: none;">Terms & condition</a> & <a href="#" style="text-decoration: none;">Privacy </a></p>
+      </div>
+    </form>
+  </div>
+<script>$(".email-signup").hide();
+$("#signup-box-link").click(function(){
+  $(".email-login").fadeOut(100);
+  $(".email-signup").delay(100).fadeIn(100);
+  $("#login-box-link").removeClass("active");
+  $("#signup-box-link").addClass("active");
 });
-
-$("#register-link").click(function() {
-    $("#register-form").delay(105).fadeIn(100);
-    $("#login-form").fadeOut(100);
-    $("#login-link").removeClass("active");
-    $("#login-link").css("color", "#4E5166");
-    $("#register-link").css("color", "#7BE5A0");
-    $(this).addClass("active");
+$("#login-box-link").click(function(){
+  $(".email-login").delay(100).fadeIn(100);;
+  $(".email-signup").fadeOut(100);
+  $("#login-box-link").addClass("active");
+  $("#signup-box-link").removeClass("active");
 });</script>
 </body>
 </html>

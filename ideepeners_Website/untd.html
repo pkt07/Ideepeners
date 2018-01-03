@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <title>IDeepeners</title>
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style2.css">
 <link rel="stylesheet" href="css/styles.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css"> -->
@@ -121,16 +121,33 @@
     <div class="brand">
    	
      <a href="#"><img class="logo" src="images/logo.png" height="60px" width="120px"></a>
+     <i class="fa fa-bell" style="font-size:22px;position: relative;left:65px;top:-25px;"></i>
     </div>
+
     <nav>
 
       <input type="text" name="country" id="autocomplete-ajax" placeholder="search for stories,article"><i class="fa fa-search" style="font-size:1.5em"></i>
     </nav>
 <div class="publish"><p class="pub">Publish</p></div>
-<div class="top">
-<p class="topp" style="position: relative;top:-8px;left:10px;"><a href="#" style="text-decoration: none;">Login/Signup</a></p></div>
-
-  </div>
+<div class="header-right">
+    <div class="avatar-wrapper" id="avatarWrapper">
+      <img alt="User name here" class="avatar-photo" height="32" src="http://netengine.com.au/assets/images/team/felix_lee-0c9f1cab.jpg" width="32"/>
+      <svg class="avatar-dropdown-arrow" height="24" id="dropdownWrapperArrow" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+        <title>Dropdown Arrow</title>
+        <path d="M12 14.5c-.2 0-.3-.1-.5-.2l-3.8-3.6c-.2-.2-.2-.4-.2-.5 0-.1 0-.3.2-.5.3-.3.7-.3 1 0l3.3 3.1 3.3-3.1c.2-.2.5-.2.8-.1.3.1.4.4.4.6 0 .2-.1.4-.2.5l-3.8 3.6c-.1.1-.3.2-.5.2z"></path>
+      </svg>
+    </div>
+    <div class="dropdown-wrapper" id="dropdownWrapper" style="width:120px">
+      <div class="dropdown-links">
+        <a href="#">My Profile</a>
+        <a href="#">User Analytics</a>
+        <a href="#">Editor Studio</a>
+        <a href="#">Channel</a>
+        <a href="#">Accout Setting</a>
+        <a href="#">Logout</a>
+      </div>
+    </div>
+   </div>
 </section>
 <span class="open" style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="fa fa-bars"></i></span>
 <div class="tooper">
@@ -303,6 +320,28 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
+ </script>
+ <script type="text/javascript">
+var headerProfileAvatar = document.getElementById("avatarWrapper")
+var headerProfileDropdownArrow = document.getElementById("dropdownWrapperArrow");
+var headerProfileDropdown = document.getElementById("dropdownWrapper");
+
+document.addEventListener("click", function(event) {
+  var headerProfileDropdownClickedWithin = headerProfileDropdown.contains(event.target);
+  
+  if (!headerProfileDropdownClickedWithin) {
+    if (headerProfileDropdown.classList.contains("active")) {
+      headerProfileDropdown.classList.remove("active");
+      headerProfileDropdownArrow.classList.remove("active");
+    }
+  }
+});
+
+headerProfileAvatar.addEventListener("click", function(event) {
+  headerProfileDropdown.classList.toggle("active");
+  headerProfileDropdownArrow.classList.toggle("active");
+  event.stopPropagation();
+});
  </script>
  <!-- <script src="js/default.js"></script> -->
 <!-- <script type="text/javascript" src="js/infinite_scroll.js"></script> -->
