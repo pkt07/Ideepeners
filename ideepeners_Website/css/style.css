@@ -5,7 +5,7 @@ body{
 .logo{
   position: relative;
   left:-20px;
-  top:-2px;
+  top:4px;
 }
 .navigation {
   height: 55px;
@@ -165,24 +165,28 @@ outline: none;
   width: 70px;
 
 }
-.top{
+.topp{
     position: relative;
-    top:-28px;
-    left:97%;
+    top:-25px;
+    left : 980px;
     font-weight:550;
     border:1px solid #340644;
+    background-color: #fff;
     width:110px;
     height:36px;
     border-radius: 10px;
     box-shadow: 1px 1px 3px #7D7878;
     font-family: 'Ubuntu';
 }
+.topp:focus{
+  outline: none;
+}
 .slider, 
 .slider > div {
     /* Images default to Center Center. Maybe try 'center top'? */
     background-position: center center;
     display: block;
-    width: 1280px;
+    width:98vw;
     height: 500px;
     /* height: 100vh; *//* If you want fullscreen */
     position: relative;
@@ -226,16 +230,16 @@ outline: none;
 }
 
 .slider > .left {
-    left: -100px;
+    left:0;
 }
 .slider > .right {
-    right: -100px;
+    right:0;
 }
 .slider:hover > .left {
-    left: 0;
+    left:0;
 }
 .slider:hover > .right {
-    right: 0;
+    right:0;
 }
 
 .slider > i:hover {
@@ -419,7 +423,7 @@ outline: none;
 }
 #mixedSlider .MS-content .item {
   display: inline-block;
-  width:23%;
+  width:23.4%;
   position: relative;
   vertical-align: top;
   overflow: hidden;
@@ -439,12 +443,16 @@ outline: none;
 }
 .containerr{
   position: relative;
-  top:-160px;
+  height:280px;
+  top:-170px;
 }
 .blogTitle {
   position: relative;
   top:170px;
-  width:390px;
+  width:auto;
+}
+.imgTitle{
+  height:250px;
 }
 h2{
   font-size:0.7em;
@@ -454,6 +462,12 @@ h2{
   position: relative;
   top:235px;
   width:240px;
+}
+.linee{
+  width:87vw;
+  position:relative;
+  top:-30px;
+  left:35px;">
 }
 #mixedSlider .MS-content .item .imgTitle {
   position: relative;
@@ -468,7 +482,7 @@ h2{
 
   height:95px;
   background-color: rgba(255, 255, 255, 0.5);
-  width:242px;
+  width:auto;
   box-shadow: 1px 1px 5px #757171;
   bottom: -4.5%;
   border-bottom-left-radius:14px;
@@ -563,7 +577,7 @@ h2{
   border-radius: 50%;
   position: relative;
  left:10px;
-  top:-125px;
+  top:-10px;
 }
 .image{
   border-top-left-radius: 10px;

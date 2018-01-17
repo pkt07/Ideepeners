@@ -6,8 +6,9 @@
 *
 *   Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
-
+var count_of_right = 0;
 (function($){
+
 
     // ==== BEGINS PLUGGIN ====
     $.fn.multislider = function(data, callback){
@@ -129,16 +130,16 @@
         // updated options with defaults, measure slide widths for animation calculations, carry out setting implementations
         function createSettings() {
             defaults = settings || {
-    			continuous: false,	// endless scrolling with no pauses
-    			slideAll: false,	// slide all visible slides, or just one at a time
-    			// autoSlide: true,	// DEPRECATED
-    			interval: 2000,		// time bewteen slide animation, 0 or 'false' prevents auto-sliding
-    			duration: 500,	    // duration of slide animation
-    			hoverPause: true,	// pause slideshow on hover
+                continuous: false,  // endless scrolling with no pauses
+                slideAll: false,    // slide all visible slides, or just one at a time
+                // autoSlide: true, // DEPRECATED
+                interval: 2000,     // time bewteen slide animation, 0 or 'false' prevents auto-sliding
+                duration: 500,      // duration of slide animation
+                hoverPause: true,   // pause slideshow on hover
                 pauseAbove: null,   // pause above specified screen width
                 pauseBelow: null   // pause below specified screen width
-    		}
-    		settings = $.extend({},defaults,data);
+            }
+            settings = $.extend({},defaults,data);
 
             findItemWidth();
             animateDuration = settings.duration;
@@ -154,7 +155,7 @@
         function selectAnimations () {
             if (settings.continuous){
                 settings.autoSlide = false;
-                continuousLeft();
+                // continuousLeft();
             } else if (settings.slideAll){
                 animateSlideRight = $multislider.data('prevAll');
                 animateSlideLeft = $multislider.data('nextAll');
@@ -166,7 +167,7 @@
 
         // measure slide width, for animation calculations
         function findItemWidth(){
-            reTargetSlides();
+           // reTargetSlides();
             animateDistance = $imgFirst.width();
             var left = parseInt($msContent.find('.item:first').css('padding-left'));
             var right = parseInt($msContent.find('.item:first').css('padding-right'));
@@ -177,51 +178,51 @@
         // recursive auto-slide loop
         
 
-        function resetInterval() {
-            if (settings.interval !== 0 && settings.interval !== false && settings.continuous !== true){
-                clearInterval(autoSlideInterval);
-                autoSlide();
-            }
-        }
+         function resetInterval() {
+             if (settings.interval !== 0 && settings.interval !== false && settings.continuous !== true){
+                 clearInterval(autoSlideInterval);
+                 //autoSlide();
+             }
+         }
 
-        // target first and last visible slides before each new animation
-        function reTargetSlides(){
-            $imgFirst = $msContent.find('.item:first');
-            $imgLast = $msContent.find('.item:last');
-        }
+        // // target first and last visible slides before each new animation
+         function reTargetSlides(){
+             $imgFirst = $msContent.find('.item:first');
+             $imgLast = $msContent.find('.item:last');
+         }
 
         // prevent animation firing if multislider is currently animating
         // all animations pass through this function, which emits events, and adds/removes animating class
         function isItAnimating(callback){
-			if(!$multislider.hasClass('ms-animating') &&
+            if(!$multislider.hasClass('ms-animating') &&
                !$multislider.hasClass('ms-HOVER') &&
                !$multislider.hasClass('ms-PAUSE')){
                     $multislider.trigger('ms.before.animate'); // event!
                     $multislider.addClass('ms-animating');
                     callback();    //callback is animation
-			}
-		}
+            }
+        }
 
         // update multislider at the end of each animation
         function doneAnimating() {
-			if($multislider.hasClass('ms-animating')){
-				$multislider.removeClass('ms-animating');
+            if($multislider.hasClass('ms-animating')){
+                $multislider.removeClass('ms-animating');
                 $multislider.trigger('ms.after.animate'); // event!
             }
-		}
+        }
 
         // logic for pausing and restarting the multislider on hover
         function pauseHover() {
             // continuous scroll pause slightly different
             if(settings.continuous){
-				$msContent.on('mouseover',function(){
-					doneAnimating();
-					$msContent.children('.item:first').stop();
-				});
-				$msContent.on('mouseout',function(){
-					continuousLeft();
-				});
-			} else {
+                $msContent.on('mouseover',function(){
+                    doneAnimating();
+                    $msContent.children('.item:first').stop();
+                });
+                $msContent.on('mouseout',function(){
+                    // continuousLeft();
+                });
+            } else {
             // regular animation pausing
                 $msContent.on('mouseover',function(){
                     $multislider.addClass('ms-HOVER');
@@ -229,7 +230,7 @@
                 $msContent.on('mouseout',function(){
                     $multislider.removeClass('ms-HOVER');
                 });
-			}
+            }
         }
 
         // calculate remaining animation, if stopped mid-animation and resuming
@@ -242,8 +243,8 @@
 
         // determine how many slides need to be moved over, if slideAll is true
         function calcNumSlidesToMove(){
-            totalWidth = $msContent.width();						          // total width of .MS-content containing all visible slides
-		    numberVisibleSlides = Math.round(totalWidth/animateDistance);     // number of (visible) slides needed to be moved in each animation
+            totalWidth = $msContent.width();                                  // total width of .MS-content containing all visible slides
+            numberVisibleSlides = Math.round(totalWidth/animateDistance);     // number of (visible) slides needed to be moved in each animation
         }
 
 
@@ -303,43 +304,51 @@
         //         );
         //     });
         // }
-
+        
         function singleLeft(){
-            isItAnimating(function(){
-                reTargetSlides();
-                $imgFirst.animate(
-                    {
-                        marginLeft: -animateDistance
-                    }, {
-                        duration: animateDuration,
-                        easing: "swing",
-                        complete: function(){
-                            $imgFirst.detach().removeAttr('style').appendTo($msContent);
-                            doneAnimating();
+            if(count_of_right < 3){
+                isItAnimating(function(){
+                    reTargetSlides();
+                    $imgFirst.animate(
+                        {
+                            marginLeft: -animateDistance
+                        }, {
+                            duration: animateDuration,
+                            easing: "swing",
+                            complete: function(){
+                                $imgFirst.detach().removeAttr('style').appendTo($msContent);
+                                doneAnimating();
+                            }
                         }
-                    }
-                );
-            });
+                    );
+                });
+                count_of_right +=1;
+            }
+            
         }
 
         function singleRight(){
-            isItAnimating(function(){
-                reTargetSlides();
-                $imgLast.css('margin-left',-animateDistance).prependTo($msContent);
-                $imgLast.animate(
-                    {
-                        marginLeft: 0
-                    }, {
-                        duration: animateDuration,
-                        easing: "swing",
-                        complete: function(){
-                            $imgLast.removeAttr("style");
-                            doneAnimating();
+            if(count_of_right >0){
+                isItAnimating(function(){
+                    reTargetSlides();
+                    $imgLast.css('margin-left',-animateDistance).prependTo($msContent);
+                    $imgLast.animate(
+                        {
+                            marginLeft: 0
+                        }, {
+                            duration: animateDuration,
+                            easing: "swing",
+                            complete: function(){
+                                $imgLast.removeAttr("style");
+                                doneAnimating();
+                            }
                         }
-                    }
-                );
-            });
+                    );
+                });
+            count_of_right -=1;
+            }
         }
+        
     //return $multislider;
     }
 })(jQuery);

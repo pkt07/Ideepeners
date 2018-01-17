@@ -1,14 +1,14 @@
 .upperbody{
-  border:1px solid #eee;
-  width:471px;
-  position: relative;
-  left:31.6%;
-  top:10px;
+  border:1px solid #340644;
+  width:37.6vw;
+  position:absolute;
+  margin-left:-12px;
+  top:-151px;
   height:150px;
   background-color: #340644;
-   -webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.33);
+  /* -webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.33);
 -moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.33);
-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.33);
+box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.33);*/
 
 }
 .top_image{
@@ -18,21 +18,23 @@ box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.33);
 }
 .uppertext{
   position: relative;
-  left:5px;
+  left:22px;
   font-size:15px;
   top:7px;
   color:#fff;
-
+  width:34vw;
+  text-align: justify;
 }
 .login-box{
   position:relative;
-  top:-2px;
+  top:140px;
   margin: 10px auto;
-  width: 450px;
+  width: 36vw;
   height: 270px;
   background-color: #fff;
   padding: 10px;
-  border-radius: 3px;
+  border-bottom-right-radius: : 3px;
+  border-bottom-left-radius: : 3px;
   border:1px solid #eee;
   -webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.33);
 -moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.33);
@@ -51,7 +53,7 @@ box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.33);
   margin: 0 25px;
   padding: 0 20px;
   text-decoration: none;
-  color: #666;
+  color: #717171;
   font-weight: bold;
   font-size: 15px;
   -webkit-transition: all 0.1s linear;
@@ -59,8 +61,10 @@ box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.33);
   transition: all 0.1s linear;
 }
 .lb-header .active{
-  color: #029f5b;
+  color: #340644;
   font-size: 18px;
+  padding: 12px 18px;
+  border-bottom: 1px solid #340644;
 }
 .social-login{
   position:relative;
@@ -165,7 +169,7 @@ box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.33);
 }
 .checkbox{
   position: relative;
-  left:-220px;
+  left:-225px;
   top:-42px;
   font-size: 2px;
 }
@@ -173,11 +177,18 @@ box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.33);
   position: relative;
   top:-150px;
   font-size: 0.6rem;
-  left:105px;
+  left:95px;
 }
 .text_privacy_sign{
   position: relative;
   top:-135px;
   font-size: 0.6rem;
   left:-90px;
+}
+.fa-times{
+  position: relative;
+  float:right;
+  right:10px;
+  color: #fff;
+  top:-150px;
 }

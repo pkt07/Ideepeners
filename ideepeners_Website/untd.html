@@ -10,97 +10,98 @@
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:regular,bold&subset=Latin">
  <script type="text/javascript" src="js/data.json"></script>
- <script type="text/javascript" >
+ <script type="text/javascript">
   function load() {
-		var mydata = JSON.parse(s);
-		 console.log("hello");
-
-		first_div = document.getElementsByClassName("tooper");
-		newDiv = document.createElement('div');
-		var div_internal_1 = first_div[0].appendChild(newDiv);
-		div_internal_1.classList.add("containerr");
-		
-		first_div = document.getElementsByClassName("containerr");
-		newDiv = document.createElement('div');
-		var div_internal_2 = first_div[0].appendChild(newDiv);
-		div_internal_2.classList.add("mixedSlider");
-		 document.getElementsByClassName("mixedSlider")[0].setAttribute("id",'mixedSlider');
-
-
-		first_div = document.getElementsByClassName("mixedSlider");
-		newDiv = document.createElement('div');
-		var div_internal_2 = first_div[0].appendChild(newDiv);
-		div_internal_2.classList.add("MS-content");
+    var mydata = JSON.parse(s);
+     console.log("hello");
+     
+    first_div = document.getElementsByClassName("tooper");
+    newDiv = document.createElement('div');
+    var div_internal_1 = first_div[0].appendChild(newDiv);
+    div_internal_1.classList.add("containerr");
+    div_internal_1.innerHTML=div_internal_1.innerHTML+ "</br>"+"<p class='p_id' "+">"+"Recommended Article"+"</p>"+"<button class='see_more' "+">"+"See More"+"</button>"+"<hr class='linee' "+">";
+    
+    first_div = document.getElementsByClassName("containerr");
+    newDiv = document.createElement('div');
+    var div_internal_2 = first_div[0].appendChild(newDiv);
+    div_internal_2.classList.add("mixedSlider");
+     document.getElementsByClassName("mixedSlider")[0].setAttribute("id",'mixedSlider');
 
 
-		 // div_internal_2.innerHTML = div_internal_2.innerHTML + "<p class='para' id="+"p_id"+">"+ mydata[0].heading + "</p>"	+ "</br>" + "<p id="+"more"+">"+"More"+ "</p>";	
-		// document.getElementById("p_id")[0].value = "Tren";    // 0 change to j
-	
+    first_div = document.getElementsByClassName("mixedSlider");
+    newDiv = document.createElement('div');
+    var div_internal_2 = first_div[0].appendChild(newDiv);
+    div_internal_2.classList.add("MS-content");
 
 
-		 for(var i = 0;i < mydata.length; i++)
-		 {
-		   first_div = document.getElementsByClassName("MS-content");
-			newDiv = document.createElement('div');
-			var div_internal_3 = first_div[0].appendChild(newDiv);
-			div_internal_3.classList.add("item");
-
-			first_div = document.getElementsByClassName("item");
-			newDiv = document.createElement('div');
-			var div_internal_4 = first_div[i].appendChild(newDiv);
-			div_internal_4.classList.add("imgTitle");
-
-			div_internal_4.innerHTML = div_internal_4.innerHTML + "<h2 class='blogTitle' id="+i+"head"+">"+ mydata[i].question + "</h2>"+"<hr class='line'>"+"<p class='texx' id="+i+"paara"+">"+mydata[i].author+"</p>";  
-			//mydata[i].views=10k views
-
-		    src = mydata[i].image;
-		    img=document.getElementsByClassName('imgTitle');
-		    img = document.createElement('img');
-		    img.src = src;
-		    img.classList.add('image');
-		    div_internal_4.appendChild(img);
+     // div_internal_2.innerHTML = div_internal_2.innerHTML + "<p class='para' id="+"p_id"+">"+ mydata[0].heading + "</p>"  + "</br>" + "<p id="+"more"+">"+"More"+ "</p>"; 
+    // document.getElementById("p_id")[0].value = "Tren";    // 0 change to j
+  
 
 
-			first_div_overlay = document.getElementsByClassName("imgTitle");
-			newDiv_overlay = document.createElement('div');
-			var div_internal_overlay = first_div_overlay[i].appendChild(newDiv_overlay);
-			div_internal_overlay.classList.add("overlay");
+     for(var i = 0;i < mydata.length; i++)
+     {
+       first_div = document.getElementsByClassName("MS-content");
+      newDiv = document.createElement('div');
+      var div_internal_3 = first_div[0].appendChild(newDiv);
+      div_internal_3.classList.add("item");
 
-		    div_internal_overlay.innerHTML = div_internal_overlay.innerHTML +"<p class='texxx' id="+i+">"+mydata[i].text+"</p>"+ "<br>";
+      first_div = document.getElementsByClassName("item");
+      newDiv = document.createElement('div');
+      var div_internal_4 = first_div[i].appendChild(newDiv);
+      div_internal_4.classList.add("imgTitle");
 
-		    first_div = document.getElementsByClassName("imgTitle");
-			newDiv = document.createElement('div');
-			var div_internal_2 = first_div[i].appendChild(newDiv);
-			div_internal_2.classList.add("progress");
-			document.getElementsByClassName("progress")[i].setAttribute("id",i+'progress');
+      div_internal_4.innerHTML = div_internal_4.innerHTML + "<h2 class='blogTitle' id="+i+"head"+">"+ mydata[i].question + "</h2>"+"<hr class='line'>"+"<p class='texx' id="+i+"paara"+">"+mydata[i].author+"</p>";  
+      //mydata[i].views=10k views
 
-			first_div = document.getElementsByClassName("progress");
-			newDiv = document.createElement('div');
-			var div_internal_2 = first_div[i].appendChild(newDiv);
-			div_internal_2.classList.add("bar");
-			document.getElementsByClassName("bar")[i].setAttribute("id",i+'bar');
-
-
-			div_internal_4.innerHTML = div_internal_4.innerHTML + "<i class='fa fa-bookmark-o' id="+i+">"+ "</i>"+"<i class='fa fa-ellipsis-v' id="+i+">"+ "</i>";
-			 document.getElementsByClassName("fa fa-bookmark-o")[i].setAttribute("id",i+'icon');
-			 document.getElementsByClassName("fa fa-ellipsis-v")[i].setAttribute("id",i+'vert_cir');
-			src = mydata[i].image;
-		    img=document.getElementsByClassName('item');
-		    img = document.createElement('img');
-		    img.src = src;
-		    img.classList.add('img');
-		    div_internal_3.appendChild(img);
-
-		 }
-		 first_div = document.getElementsByClassName("mixedSlider");
-		newDiv = document.createElement('div');
-		var div_internal_5 = first_div[0].appendChild(newDiv);
-		div_internal_5.classList.add("MS-controls");
+        src = mydata[i].image;
+        img=document.getElementsByClassName('imgTitle');
+        img = document.createElement('img');
+        img.src = src;
+        img.classList.add('image');
+        div_internal_4.appendChild(img);
 
 
-		div_internal_5.innerHTML = div_internal_5.innerHTML + "<button class='MS-left'"+">" +  "<i class='fa fa-angle-left' "+">" + "</i>" + "</button>";
-		div_internal_5.innerHTML = div_internal_5.innerHTML + "<button class='MS-right'"+">" +  "<i class='fa fa-angle-right' "+">" + "</i>" + "</button>";
-		}
+      first_div_overlay = document.getElementsByClassName("imgTitle");
+      newDiv_overlay = document.createElement('div');
+      var div_internal_overlay = first_div_overlay[i].appendChild(newDiv_overlay);
+      div_internal_overlay.classList.add("overlay");
+
+        div_internal_overlay.innerHTML = div_internal_overlay.innerHTML +"<p class='texxx' id="+i+">"+mydata[i].text+"</p>"+ "<br>";
+
+        first_div = document.getElementsByClassName("imgTitle");
+      newDiv = document.createElement('div');
+      var div_internal_2 = first_div[i].appendChild(newDiv);
+      div_internal_2.classList.add("progress");
+      document.getElementsByClassName("progress")[i].setAttribute("id",i+'progress');
+
+      first_div = document.getElementsByClassName("progress");
+      newDiv = document.createElement('div');
+      var div_internal_2 = first_div[i].appendChild(newDiv);
+      div_internal_2.classList.add("bar");
+      document.getElementsByClassName("bar")[i].setAttribute("id",i+'bar');
+
+
+      div_internal_4.innerHTML = div_internal_4.innerHTML + "<i class='fa fa-bookmark-o' id="+i+">"+ "</i>"+"<i class='fa fa-ellipsis-v' id="+i+">"+ "</i>";
+       document.getElementsByClassName("fa fa-bookmark-o")[i].setAttribute("id",i+'icon');
+       document.getElementsByClassName("fa fa-ellipsis-v")[i].setAttribute("id",i+'vert_cir');
+      src = mydata[i].image;
+        img=document.getElementsByClassName('item');
+        img = document.createElement('img');
+        img.src = src;
+        img.classList.add('img');
+        div_internal_3.appendChild(img);
+
+     }
+     first_div = document.getElementsByClassName("mixedSlider");
+    newDiv = document.createElement('div');
+    var div_internal_5 = first_div[0].appendChild(newDiv);
+    div_internal_5.classList.add("MS-controls");
+
+
+    div_internal_5.innerHTML = div_internal_5.innerHTML + "<button class='MS-left'"+">" +  "<i class='fa fa-angle-left' "+">" + "</i>" + "</button>";
+    div_internal_5.innerHTML = div_internal_5.innerHTML + "<button class='MS-right'"+">" +  "<i class='fa fa-angle-right' "+">" + "</i>" + "</button>";
+    }
         </script>
  </head> 
  <section class="navigation">
@@ -120,45 +121,46 @@
 
     <div class="brand">
    	
-     <a href="#"><img class="logo" src="images/logo.png" height="60px" width="120px"></a>
-     <i class="fa fa-bell" style="font-size:22px;position: relative;left:65px;top:-25px;"></i>
+     <a href="#"><img class="logo" src="images/logo.png" height="50px" width="120px"></a>
     </div>
 
     <nav>
 
       <input type="text" name="country" id="autocomplete-ajax" placeholder="search for stories,article"><i class="fa fa-search" style="font-size:1.5em"></i>
-    </nav>
-<div class="publish"><p class="pub">Publish</p></div>
+    <div class="icons_top">
+    <i class="fa fa-rocket fa-2x"><p class="rocket_text">Trending</p></i><i class="fa fa-bookmark fa-2x"><p class="bookmark_text">Bookmark</p></i><i class="fa fa-bell fa-2x"><p class="bell_text">Notification</p></i>
+    </div>
 <div class="header-right">
     <div class="avatar-wrapper" id="avatarWrapper">
-      <img alt="User name here" class="avatar-photo" height="32" src="http://netengine.com.au/assets/images/team/felix_lee-0c9f1cab.jpg" width="32"/>
+      <img alt="User name here" class="avatar-photo" height="32" src="images/home-img-6.jpg" width="32"/>
       <svg class="avatar-dropdown-arrow" height="24" id="dropdownWrapperArrow" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-        <title>Dropdown Arrow</title>
         <path d="M12 14.5c-.2 0-.3-.1-.5-.2l-3.8-3.6c-.2-.2-.2-.4-.2-.5 0-.1 0-.3.2-.5.3-.3.7-.3 1 0l3.3 3.1 3.3-3.1c.2-.2.5-.2.8-.1.3.1.4.4.4.6 0 .2-.1.4-.2.5l-3.8 3.6c-.1.1-.3.2-.5.2z"></path>
       </svg>
     </div>
     <div class="dropdown-wrapper" id="dropdownWrapper" style="width:120px">
       <div class="dropdown-links">
-        <a href="#">My Profile</a>
+        <a href="#" class="tagg">My Profile</a>
         <a href="#">User Analytics</a>
         <a href="#">Editor Studio</a>
         <a href="#">Channel</a>
         <a href="#">Accout Setting</a>
         <a href="#">Logout</a>
+        <p>Language:English</p>
       </div>
     </div>
    </div>
+   </nav>
 </section>
 <span class="open" style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="fa fa-bars"></i></span>
 <div class="tooper">
 <div class="container" id="0container">
   <div class="slider" id="slider1">
     <!-- Slides -->
-    <div style="background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/30256/1200_bodie-11.jpg)"></div>
-    <div style="background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/30256/jungle.jpg)"></div>
-    <div style="background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/30256/Gif-pont-lueur-600.gif)"></div>
-    <div style="background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/30256/1200_110627-8240-Myst.jpg)"></div>
-    <div style="background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/30256/1200_Sharpened-version.jpg)"></div>
+     <div style="background-image:url(https://media.gadventures.com/media-server/cache/79/85/7985d63723498cf14af315cb19b51faa.jpg);"></div>
+    <div style="background-image:url(https://www.brainscape.com/blog/wp-content/uploads/2014/12/sunset-plane.png)"></div>
+    <div style="background-image:url(http://www.concab.com/Images/Blog.jpg)"></div>
+    <div style="background-image:url(http://www.crystal-d.com/blog/wp-content/uploads/2017/05/Travel.jpg)"></div>
+    <div style="background-image:url(https://www.altayer.com/globalassets/_homepage/ventures/altayer-travel-agency/top/top-al-tayer-travel-agency.jpg)"></div>
     <!-- The Arrows -->
     <i class="left" class="arrows" style="z-index:2; position:absolute;"><svg viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z"></path></svg></i>
     <i class="right" class="arrows" style="z-index:2; position:absolute;"><svg viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" transform="translate(100, 100) rotate(180) "></path></svg></i>
@@ -168,16 +170,13 @@
 <br>
 
 </div>
-<p class="p_id">Recommended Article</p>
-<button class="see_more">See more</button>
-<hr style="width:1130px;position: relative;top:-30px;left:35px;">
+<button class="stories"><p style="font-size:1.3em;">Short Stories</p></button>
+<button class="article"><p  style="font-size:1.3em;">Article</p></button>
    <script type="text/javascript">
        load();
     </script> 
 </div>
 
-  <i class="fa fa-angle-right fa-3x" id="arrow-right"></i> 
- 
  <!-- <div class="containerr">
 	<div id="mixedSlider">
                     <div class="MS-content">
@@ -311,9 +310,10 @@
  -->
  <script src="js/jquery.min.js"></script>
  <script src="js/index.js"></script>
+
  <script type="text/javascript">
 function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";3
+    document.getElementById("mySidenav").style.width = "250px";
      	//document.getElementById("bar").style.visibility = "hidden";
    }
 

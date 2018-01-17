@@ -5,20 +5,22 @@
 <title>IDeepeners</title>
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/login_signup.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css"> -->
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:regular,bold&subset=Latin">
  <script type="text/javascript" src="js/data.json"></script>
- <script type="text/javascript" >
+ <script type="text/javascript">
   function load() {
 		var mydata = JSON.parse(s);
 		 console.log("hello");
-
+     
 		first_div = document.getElementsByClassName("tooper");
 		newDiv = document.createElement('div');
 		var div_internal_1 = first_div[0].appendChild(newDiv);
 		div_internal_1.classList.add("containerr");
+    div_internal_1.innerHTML=div_internal_1.innerHTML+ "</br>"+"<p class='p_id' "+">"+"Recommended Article"+"</p>"+"<button class='see_more' "+">"+"See More"+"</button>"+"<hr class='linee' "+">";
 		
 		first_div = document.getElementsByClassName("containerr");
 		newDiv = document.createElement('div');
@@ -120,16 +122,96 @@
 
     <div class="brand">
    	
-     <a href="#"><img class="logo" src="images/logo.png" height="60px" width="120px"></a>
+     <a href="#"><img class="logo" src="images/logo.png" height="50px" width="120px"></a>
     </div>
     <nav>
 
       <input type="text" name="country" id="autocomplete-ajax" placeholder="search for stories,article"><i class="fa fa-search" style="font-size:1.5em"></i>
     </nav>
-<div class="publish"><p class="pub">Publish</p></div>
-<div class="top">
-<p class="topp" style="position: relative;top:-8px;left:10px;"><a href="#" style="text-decoration: none;">Login/Signup</a></p></div>
+  <div class="publish">
+    <p class="pub">Publish</p>
+  </div>
+  <div class="top">
+    <button class="topp">Login/Signup</button>
+  </div>
+<div class="login_cover" style="display: none;">
 
+<div class="login-box">
+<div class="upperbody">
+    <img class="top_image" src="images/logo_white.png" height="55px" width="127px">
+
+    <p class="uppertext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis pellentesque metus id lacinia. Nunc dapibus pulvinar auctor. Duis nec sem at orci commodo viverra id in ipsum. Fusce </p>
+    <i class="fa fa-times"></i>
+</div>
+    <div class="lb-header">
+
+      <a href="#" class="active" id="login-box-link">Login</a>
+      <a href="#" id="signup-box-link">Sign Up</a>
+    </div>
+    <!-- <div class="social-login">
+      <a href="#">
+        <i class="fa fa-facebook fa-lg"></i>
+        Login in with facebook
+      </a>
+      <a href="#">
+        <i class="fa fa-google-plus fa-lg"></i>
+        log in with Google
+      </a>
+    </div> -->
+    <form class="email-login">
+      <div class="u-form-group">
+        <input type="email" placeholder="Email"/>
+      </div>
+      <div class="u-form-group">
+        <input type="password" placeholder="Password"/>
+      </div>
+      <div class="u-form-group">
+        <button>Log in</button>
+      </div>
+      <div class="u-form-group">
+        <a href="#" class="forgot-password">Trouble Login in?</a>
+       <input type="checkbox" class="checkbox"><a href="#" class="remember">Remember Me</a>
+      </div>
+      <div class="social-login">
+     <a href="#">
+        Login with Google
+      </a>
+    </div>
+      <div class="social-login">
+      <a href="#" style="background-color: #001447">
+        Login with facebook
+      </a>
+      </div>
+      <div class="policy">
+      <p class="text_privacy">By logging in, you agree to our <a href="#" style="text-decoration: none;">Terms & condition</a> & <a href="#" style="text-decoration: none;">Privacy </a></p>
+      </div>
+    </form>
+    <form class="email-signup">
+       <div class="u-form-group">
+        <input type="email" placeholder="Email"/>
+      </div>
+      <div class="u-form-group">
+        <input type="password" placeholder="Password"/>
+      </div>
+      <div class="u-form-group">
+        <button style="position: relative;top:7px;">Create Account</button>
+      </div>
+      <div class="social-login" style="margin-top:30px">
+     <a href="#">
+        Login with Google
+      </a>
+    </div>
+      <div class="social-login">
+      <a href="#" style="background-color: #001447">
+        Login with facebook
+      </a>
+      </div>
+      <div class="policy">
+      <p class="text_privacy_sign">By logging in, you agree to our <a href="#" style="text-decoration: none;">Terms & condition</a> & <a href="#" style="text-decoration: none;">Privacy </a></p>
+      </div>
+    </form>
+  </div>
+</div>
   </div>
 </section>
 <span class="open" style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="fa fa-bars"></i></span>
@@ -137,11 +219,11 @@
 <div class="container" id="0container">
   <div class="slider" id="slider1">
     <!-- Slides -->
-    <div style="background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/30256/1200_bodie-11.jpg)"></div>
-    <div style="background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/30256/jungle.jpg)"></div>
-    <div style="background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/30256/Gif-pont-lueur-600.gif)"></div>
-    <div style="background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/30256/1200_110627-8240-Myst.jpg)"></div>
-    <div style="background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/30256/1200_Sharpened-version.jpg)"></div>
+     <div style="background-image:url(https://media.gadventures.com/media-server/cache/79/85/7985d63723498cf14af315cb19b51faa.jpg);"></div>
+    <div style="background-image:url(https://www.brainscape.com/blog/wp-content/uploads/2014/12/sunset-plane.png)"></div>
+    <div style="background-image:url(http://www.concab.com/Images/Blog.jpg)"></div>
+    <div style="background-image:url(http://www.crystal-d.com/blog/wp-content/uploads/2017/05/Travel.jpg)"></div>
+    <div style="background-image:url(https://www.altayer.com/globalassets/_homepage/ventures/altayer-travel-agency/top/top-al-tayer-travel-agency.jpg)"></div>
     <!-- The Arrows -->
     <i class="left" class="arrows" style="z-index:2; position:absolute;"><svg viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z"></path></svg></i>
     <i class="right" class="arrows" style="z-index:2; position:absolute;"><svg viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" transform="translate(100, 100) rotate(180) "></path></svg></i>
@@ -151,9 +233,8 @@
 <br>
 
 </div>
-<p class="p_id">Recommended Article</p>
-<button class="see_more">See more</button>
-<hr style="width:1130px;position: relative;top:-30px;left:35px;">
+<!-- <p class="p_id">Recommended Article</p>
+<button class="see_more">See more</button> -->
    <script type="text/javascript">
        load();
     </script> 
@@ -242,51 +323,7 @@
 
 	<p class="more">More<i class="fa fa-angle-right"></i></p>
 <br>
-<section class="gallery" id="toop1">
-  <div class="wrapper" style="position: relative;left:35px;top:20px;">
-    <div class="grid" style="width:1180px">
- 
-     <div class="cell">
-          <img src="images/gallery-item-2-big.jpg" class="responsive-image">
-         <div class="border" style="width:262px;left:10.5%;height:60px"><img class="image_title" src="images/home-img-5.jpg" height="42px" width="42px"><p class="image_holder">Yashwant Sinha</p></div> 
-      </div>
-      <div class="cell">
-        <img src="images/gallery-item-2-big.jpg" class="responsive-image">
-                 <div class="border" style="width:262px;left:10.5%;height:60px"><img class="image_title" src="images/home-img-5.jpg" height="42px" width="42px"><p class="image_holder">Yashwant Sinha</p></div> 
-      </div>
-      <div class="cell">
-        <img src="images/gallery-item-2-big.jpg" class="responsive-image">
-                 <div class="border" style="width:262px;left:10.5%;height:60px"><img class="image_title" src="images/home-img-5.jpg" height="42px" width="42px"><p class="image_holder">Yashwant Sinha</p></div>
-      </div>
-      <div class="cell" id="xx">
-        <img src="images/gallery-item-2-big.jpg" class="responsive-image">
-                 <div class="border" style="width:262px;left:10.5%;height:60px"><img class="image_title" src="images/home-img-5.jpg" height="42px" width="42px"><p class="image_holder">Yashwant Sinha</p></div> 
-
-      </div>
-    <div class="cell">
-          <img src="images/gallery-item-2-big.jpg" class="responsive-image">
-         <div class="border" style="width:262px;left:10.5%;height:60px"><img class="image_title" src="images/home-img-5.jpg" height="42px" width="42px"><p class="image_holder">Yashwant Sinha</p></div> 
-      </div>
-      <div class="cell">
-        <img src="images/gallery-item-2-big.jpg" class="responsive-image">
-                 <div class="border" style="width:262px;left:10.5%;height:60px"><img class="image_title" src="images/home-img-5.jpg" height="42px" width="42px"><p class="image_holder">Yashwant Sinha</p></div> 
-      </div>
-      <div class="cell">
-        <img src="images/gallery-item-2-big.jpg" class="responsive-image">
-                 <div class="border" style="width:262px;left:10.5%;height:60px"><img class="image_title" src="images/home-img-5.jpg" height="42px" width="42px"><p class="image_holder">Yashwant Sinha</p></div>
-      </div>
-      <div class="cell" id="xxx">
-        <img src="images/gallery-item-2-big.jpg" class="responsive-image">
-                 <div class="border" style="width:262px;left:10.5%;height:60px"><img class="image_title" src="images/home-img-5.jpg" height="42px" width="42px"><p class="image_holder">Yashwant Sinha</p></div> 
-
-      </div>
-      
-    </div>
-  </div>
-
-</section>
-</div> -->
-
+ -->
 <script>
 
 </script>
@@ -295,8 +332,21 @@
  <script src="js/jquery.min.js"></script>
  <script src="js/index.js"></script>
  <script type="text/javascript">
+   $(document).ready(function(){
+    $(".topp").click(function(){
+        $(".login_cover").toggle();
+    });
+});
+    $(document).ready(function(){
+    $(".fa-times").click(function(){
+        $(".login_cover").toggle();
+    });
+});
+
+ </script>
+ <script type="text/javascript">
 function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";3
+    document.getElementById("mySidenav").style.width = "250px";
      	//document.getElementById("bar").style.visibility = "hidden";
    }
 
@@ -305,7 +355,7 @@ function closeNav() {
 }
  </script>
  <!-- <script src="js/default.js"></script> -->
-<!-- <script type="text/javascript" src="js/infinite_scroll.js"></script> -->
+<script type="text/javascript" src="js/infinite_scroll.js"></script>
     <script type="text/javascript" src="scripts/jquery.mockjax.js"></script>
     <script type="text/javascript" src="src/jquery.autocomplete.js"></script>
     <script type="text/javascript" src="scripts/countries.js"></script>
@@ -313,13 +363,28 @@ function closeNav() {
     <script src="js/multislider.js"></script> 
 <script>
 $('#basicSlider').multislider({
-			continuous: false,
+			continuous: true,
 			duration: 2000
 		});
 		$('#mixedSlider').multislider({
 			duration: 750,
 			interval: 3000
 		});
+</script>
+<script type="text/javascript">
+$(".email-signup").hide();
+$("#signup-box-link").click(function(){
+  $(".email-login").fadeOut(100);
+  $(".email-signup").delay(100).fadeIn(100);
+  $("#login-box-link").removeClass("active");
+  $("#signup-box-link").addClass("active");
+});
+$("#login-box-link").click(function(){
+  $(".email-login").delay(100).fadeIn(100);;
+  $(".email-signup").fadeOut(100);
+  $("#login-box-link").addClass("active");
+  $("#signup-box-link").removeClass("active");
+});
 </script>
   <!-- <script src="js/bootstrap.js"></script> -->
 </body>

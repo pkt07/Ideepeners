@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <title>IDeepeners</title>
 <link rel="stylesheet" href="css/default.css">
 <link rel="stylesheet" href="css/styles.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css"> -->
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:regular,bold&subset=Latin">
  <script type="text/javascript" src="js/article_json.json"></script>
  <script type="text/javascript">
     function load() {
-    var mydata = JSON.parse(s);
+    var mydata1 = JSON.parse(s);
     console.log("hello");
 
     var first_div = document.getElementsByClassName("grid grid-pad");
@@ -23,58 +26,98 @@
     var div_internal_1 = div_internal_2[0].appendChild(newDiv);
     div_internal_1.classList.add("module");
 
-    div_internal_1.innerHTML = div_internal_1.innerHTML + "<h3 class ='heading'" + ">" + mydata[0].heading +"</h3>"+ "<p class='text' " + ">" + "A text by " + mydata[0].Author +  " by " + mydata[0].Channel +" Design on 24 August " + "</p>" + mydata[0].Content;
+    div_internal_1.innerHTML = div_internal_1.innerHTML + "<h3 class ='heading'" + ">" + mydata1[0].heading +"</h3>"+ "<p class='text' " + ">" + "By ~ " + mydata1[0].Author + "</p>" + "<i class= 'fa fa-facebook' " + ">" + "</i>"+ "<i class= 'fa fa-twitter' " + ">" + "</i>" +"<i class= 'fa fa-pinterest' " + ">" + "</i>" + "<i class= 'fa fa-google-plus' " + ">" + "</i>" + "<i class= 'fa fa-envelope' " + ">" + "</i>"+mydata1[0].Content;
+
 }
 </script>
-<script type="text/javascript" src="js/recommendation_json.json"></script>
+ <script type="text/javascript" src="js/recomend.json"></script>
 <script type="text/javascript">
- function load1() {
-    var mydata1 = JSON.parse(x);
+function load1() {
+    var mydata = JSON.parse(si);
     console.log("hello");
 
-    var first_div = document.getElementsByClassName("grid grid-pad");
-    newDiv = document.createElement('div');
-    var div_internal = first_div[0].appendChild(newDiv);
-    div_internal.classList.add("col-1-3");
-
-    for(var i = 0;i < mydata1.length; i++)
-    {   
-       var first_div = document.getElementsByClassName("col-1-3");
+    first_div = document.getElementsByClassName("tooper");
         newDiv = document.createElement('div');
-        var div_internal = first_div[0].appendChild(newDiv);
-        div_internal.classList.add("internal_module");
+        var div_internal_1 = first_div[0].appendChild(newDiv);
+        div_internal_1.classList.add("containerr");
+        
+        first_div = document.getElementsByClassName("containerr");
+        newDiv = document.createElement('div');
+        var div_internal_2 = first_div[0].appendChild(newDiv);
+        div_internal_2.classList.add("mixedSlider");
+         document.getElementsByClassName("mixedSlider")[0].setAttribute("id",'mixedSlider');
 
-         src = mydata1[i].image;
-         img=document.getElementsByClassName('internal_module');
-         img = document.createElement('img');
-         img.src = src;
-         img.classList.add('side_image');
-         div_internal.appendChild(img);
-         document.getElementsByClassName("side_image")[i].setAttribute("height","220px");
 
-        var first_div = document.getElementsByClassName("internal_module");
-        newDiv_2 = document.createElement('div');
-        var div_internal_1 = first_div[i].appendChild(newDiv_2);
-        div_internal_1.classList.add("border");
+        first_div = document.getElementsByClassName("mixedSlider");
+        newDiv = document.createElement('div');
+        var div_internal_2 = first_div[0].appendChild(newDiv);
+        div_internal_2.classList.add("MS-content");
 
-         src = mydata1[i].image;
-         img=document.getElementsByClassName('border');
-         img = document.createElement('img');
-         img.src = src;
-         img.classList.add('image1');
-         div_internal_1.appendChild(img);
-         document.getElementsByClassName("image1")[i].setAttribute("height","40px");
-         document.getElementsByClassName("image1")[i].setAttribute("width","40px");
 
-         div_internal_1.innerHTML = div_internal_1.innerHTML + "<p class ='bord1'" + ">" +mydata1[i].author +"</p>";
-         document.getElementsByClassName("bord1")[i].setAttribute("width","352px");
-     }
+         // div_internal_2.innerHTML = div_internal_2.innerHTML + "<p class='para' id="+"p_id"+">"+ mydata[0].heading + "</p>"  + "</br>" + "<p id="+"more"+">"+"More"+ "</p>"; 
+        // document.getElementById("p_id")[0].value = "Tren";    // 0 change to j
+    
 
-}
-   </script>     
 
- </head> 
- <section class="navigation">
+         for(var i = 0;i < mydata.length; i++)
+         {
+           first_div = document.getElementsByClassName("MS-content");
+            newDiv = document.createElement('div');
+            var div_internal_3 = first_div[0].appendChild(newDiv);
+            div_internal_3.classList.add("item");
+
+            first_div = document.getElementsByClassName("item");
+            newDiv = document.createElement('div');
+            var div_internal_4 = first_div[i].appendChild(newDiv);
+            div_internal_4.classList.add("imgTitle");
+
+            div_internal_4.innerHTML = div_internal_4.innerHTML + "<h2 class='blogTitle' id="+i+"head"+">"+ mydata[i].question + "</h2>"+"<hr class='line'>"+"<p class='texx' id="+i+"paara"+">"+mydata[i].author+"</p>";  
+            //mydata[i].views=10k views
+
+            src = mydata[i].image;
+            img=document.getElementsByClassName('imgTitle');
+            img = document.createElement('img');
+            img.src = src;
+            img.classList.add('image');
+            div_internal_4.appendChild(img);
+
+
+            first_div_overlay = document.getElementsByClassName("imgTitle");
+            newDiv_overlay = document.createElement('div');
+            var div_internal_overlay = first_div_overlay[i].appendChild(newDiv_overlay);
+            div_internal_overlay.classList.add("overlay");
+
+            div_internal_overlay.innerHTML = div_internal_overlay.innerHTML +"<p class='texxx' id="+i+">"+mydata[i].text+"</p>"+ "<br>";
+
+            first_div = document.getElementsByClassName("imgTitle");
+            newDiv = document.createElement('div');
+            var div_internal_2 = first_div[i].appendChild(newDiv);
+            div_internal_2.classList.add("progress");
+            document.getElementsByClassName("progress")[i].setAttribute("id",i+'progress');
+
+            first_div = document.getElementsByClassName("progress");
+            newDiv = document.createElement('div');
+            var div_internal_2 = first_div[i].appendChild(newDiv);
+            div_internal_2.classList.add("bar");
+            document.getElementsByClassName("bar")[i].setAttribute("id",i+'bar');
+
+
+            div_internal_4.innerHTML = div_internal_4.innerHTML + "<i class='fa fa-bookmark-o' id="+i+">"+ "</i>"+"<i class='fa fa-ellipsis-v' id="+i+">"+ "</i>";
+             document.getElementsByClassName("fa fa-bookmark-o")[i].setAttribute("id",i+'icon');
+             document.getElementsByClassName("fa fa-ellipsis-v")[i].setAttribute("id",i+'vert_cir');
+             src = mydata[i].image;
+            img=document.getElementsByClassName('item');
+            img = document.createElement('img');
+            img.src = src;
+            img.classList.add('img');
+            div_internal_3.appendChild(img);
+
+         }
+         
+        }
+    </script>
+</head> 
+<section class="navigation">
   <div class="nav-container">
 
 <div id="mySidenav" class="sidenav">
@@ -82,38 +125,90 @@
   <a href="#" class="tag">Home</a>
   <a href="#" class="tag">Trending</a>
   <a href="#" class="tag">Latest</a>
-  <a href="#" class="tag">Contact</a>
-  <a href="#" class="tag">Bookmark</a>
-  <a href="#" class="tag">History</a>
+  <p class="side" style="font-family:'Ubuntu';font-size:1.2em;position: relative;left: 50px;">Trending Topics</p>
+  <a href="#" class="tag"><img src = "images/about-img-4.jpg" height="30px" width="30px">Home</a>
+ <a href="#" class="tag"><img src = "images/about-img-4.jpg" height="30px" width="30px">Home</a>
+ <a href="#" class="tag"><img src = "images/about-img-4.jpg" height="30px" width="30px">Home</a>
 </div>
 
 
     <div class="brand">
     
-     <a href="#" style="margin-left:-20px;letter-spacing: -5px;">gutaloo</a>
+     <a href="#"><img class="logo" src="images/logo.png" height="50px" width="120px"></a>
+     <i class="fa fa-bell"></i>
     </div>
+
     <nav>
 
-      <input type="text" name="country" id="autocomplete-ajax" placeholder="search for stories,article"><i class="fa fa-search"></i>
+      <input type="text" name="country" id="autocomplete-ajax" placeholder="search for stories,article"><i class="fa fa-search" style="font-size:1.5em"></i>
     </nav>
-<div class="publish"><center>Publish an article<i class="fa fa-pencil-square-o" style="margin-left:10px;"></i></center></div>
-<p class="top">Login/Signup</p>
-
-  </div>
+<div class="publish"><p class="pub">Publish</p></div>
+<div class="header-right">
+    <div class="avatar-wrapper" id="avatarWrapper">
+      <img alt="User name here" class="avatar-photo" height="32" src="images/home-img-6.jpg" width="32"/>
+      <svg class="avatar-dropdown-arrow" height="24" id="dropdownWrapperArrow" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+        <title>Dropdown Arrow</title>
+        <path d="M12 14.5c-.2 0-.3-.1-.5-.2l-3.8-3.6c-.2-.2-.2-.4-.2-.5 0-.1 0-.3.2-.5.3-.3.7-.3 1 0l3.3 3.1 3.3-3.1c.2-.2.5-.2.8-.1.3.1.4.4.4.6 0 .2-.1.4-.2.5l-3.8 3.6c-.1.1-.3.2-.5.2z"></path>
+      </svg>
+    </div>
+    <div class="dropdown-wrapper" id="dropdownWrapper" style="width:120px">
+      <div class="dropdown-links">
+        <a href="#" class="tagg">My Profile</a>
+        <a href="#">User Analytics</a>
+        <a href="#">Editor Studio</a>
+        <a href="#">Channel</a>
+        <a href="#">Accout Setting</a>
+        <a href="#">Logout</a>
+        <p>Language:English</p>
+      </div>
+    </div>
+   </div>
 </section>
-
 <span class="open" style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="fa fa-bars"></i></span>
-
-
+<button style="background-color:#340644;position:relative;top:50px;z-index: 4;border:1px solid #340644;color:#fff;width:65px;height:25px;border-radius:10px;left:195px">Sports</button>
 <div class="grid grid-pad">
 <script type="text/javascript">
   load();
 </script>
-<h3 class="side_head">Trending Blog</h3>
-<script type="text/javascript">load1()</script>
+</div>
+
+<h2 class="hhead" style="font-size:1.6em;color:#340644;position: relative;left:85px;top:-70px;">RECOMMENDATIONS</h2>
+<div class="tooper">
+<script type="text/javascript">
+  load1();
+</script>
+  <!-- <div id="gallery">
+    <img src="http://lorempixel.com/g/351/220/fashion/1" alt="" />
+    <img  src="http://lorempixel.com/g/351/220/fashion/4" alt="" />
+    <img  src="http://lorempixel.com/g/351/220/fashion/3" alt="" />
+    <img  src="http://lorempixel.com/g/351/220/fashion/4" alt="" />
+  </div> -->
 </div>
 
 
+
+<script type="text/javascript">
+var headerProfileAvatar = document.getElementById("avatarWrapper")
+var headerProfileDropdownArrow = document.getElementById("dropdownWrapperArrow");
+var headerProfileDropdown = document.getElementById("dropdownWrapper");
+
+document.addEventListener("click", function(event) {
+  var headerProfileDropdownClickedWithin = headerProfileDropdown.contains(event.target);
+  
+  if (!headerProfileDropdownClickedWithin) {
+    if (headerProfileDropdown.classList.contains("active")) {
+      headerProfileDropdown.classList.remove("active");
+      headerProfileDropdownArrow.classList.remove("active");
+    }
+  }
+});
+
+headerProfileAvatar.addEventListener("click", function(event) {
+  headerProfileDropdown.classList.toggle("active");
+  headerProfileDropdownArrow.classList.toggle("active");
+  event.stopPropagation();
+});
+ </script>
 <script>
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
@@ -124,8 +219,20 @@ function closeNav() {
    
 }
 </script>
+
 <script type="text/javascript" src="scripts/jquery-1.8.2.min.js"></script>
 <script src="js/index.js"></script>
+<script src="js/multislider.js"></script> 
+<script>
+$('#basicSlider').multislider({
+            continuous: false,
+            duration: 2000
+        });
+        $('#mixedSlider').multislider({
+            duration: 750,
+            interval: 3000
+        });
+</script>
     <script type="text/javascript" src="scripts/jquery.mockjax.js"></script>
     <script type="text/javascript" src="src/jquery.autocomplete.js"></script>
     <script type="text/javascript" src="scripts/countries.js"></script>

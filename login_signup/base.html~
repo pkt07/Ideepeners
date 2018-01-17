@@ -18,7 +18,6 @@
     <p class="uppertext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis pellentesque metus id lacinia. Nunc dapibus pulvinar auctor. Duis nec sem at orci commodo viverra id in ipsum. Fusce </p>
 </div>
 <div class="login-box">
-
     <div class="lb-header">
       <a href="#" class="active" id="login-box-link">Login</a>
       <a href="#" id="signup-box-link">Sign Up</a>
@@ -69,9 +68,13 @@
         <input type="password" placeholder="Password"/>
       </div>
       <div class="u-form-group">
-        <button style="position: relative;top:7px;">Create Account</button>
+        <button>Create Account</button>
       </div>
-      <div class="social-login" style="margin-top:30px">
+      <div class="u-form-group">
+        <a href="#" class="forgot-password">Trouble Login in?</a>
+       <input type="checkbox" class="checkbox"><a href="#" class="remember">Remember Me</a>
+      </div>
+      <div class="social-login">
      <a href="#">
         Login with Google
       </a>
@@ -82,7 +85,7 @@
       </a>
       </div>
       <div class="policy">
-      <p class="text_privacy_sign">By logging in, you agree to our <a href="#" style="text-decoration: none;">Terms & condition</a> & <a href="#" style="text-decoration: none;">Privacy </a></p>
+      <p class="text_privacy">By logging in, you agree to our <a href="#" style="text-decoration: none;">Terms & condition</a> & <a href="#" style="text-decoration: none;">Privacy </a></p>
       </div>
     </form>
   </div>

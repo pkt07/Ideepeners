@@ -5,7 +5,7 @@ body{
 .logo{
   position: relative;
   left:-20px;
-  top:-2px;
+  top:2.5px;
 }
 .navigation {
   height: 55px;
@@ -82,13 +82,12 @@ nav ul li ul li a {
 }
 input[type=text]
 {
-    width:597px;
+    width:577px;
     height:40px;
     position: relative;
     top:-13px;
-    margin-left:-27%;
-    margin-top:-25px;
-    border:1px solid #340644;
+    left:-48%;
+    border:1px solid #aaa;
     background-color:#ffffff;
     box-sizing: border-box;
     box-shadow: 1px 1px 3px #7D7878;
@@ -104,31 +103,97 @@ input[type=text]:focus{
   position: relative;
   z-index: 2;
   position: relative;
-  left:6%;
+  left:-42%;
   top:-10px;
 }
-.publish{
-  border:1px solid #340644;
-  width:110px;
-  height:36px;
-  position:relative;
-  left:90%;
-  top:10px;
-  background-color:#ffffff;
-  color:#333;
-  border-radius: 10px;
-  box-shadow:1px 1px 3px #7D7878;
-  font-family: 'Ubuntu';
+input::placeholder {
+  text-align: center;
 }
-.pub{
+.article{
   position: relative;
-  left:25px;
-  top:-8px;
+  left:40%;
+  top:2%;
+  width:100px;
+  height:40px;
+  cursor:pointer;
+  z-index: 10;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline: none;
+  font-weight: bold;
 }
+ .article:active, 
+ .article:focus 
+ {
+     border-bottom:2px solid #00c; /* here configure as your needs */
+  }
+.stories{
+  position: relative;
+  left:40%;
+  top:2%;
+  font-weight: bold;
+  width:150px;
+  height:40px;
+  cursor:pointer;
+  z-index: 10;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline: none;
+}
+.stories:active, 
+ .stories:focus 
+ {
+     border-bottom:2px solid #00c; /* here configure as your needs */
+  }
 .fa{
     font-size:2em;
     margin-left:-13%;
     margin-top:4%;
+}
+.fa-rocket{
+  position: relative;
+  left:70%;
+  top:-75px;
+  color:#2b0505;
+}
+.rocket_text{
+  position: relative;
+  font-size:12px;
+  left:-8%;
+  top:-11px;
+  font-weight: bold;
+}
+.bookmark_text{
+  position: relative;
+  font-size:12px;
+  left:-20%;
+  top:-11px;
+  font-weight: bold;
+}
+.bell_text{
+  position: relative;
+  font-size:12px;
+  left:-8%;
+  top:-11px;
+  font-weight: bold;
+}
+.fa-bookmark{
+  position: relative;
+  left:90%;
+  top:-75px;
+  color:#2b0505;
+}
+.fa-bell{
+  position: relative;
+  left:108%;
+  top:-75px;
+  color:#2b0505;
 }
 .fa-angle-down{
   position: relative;
@@ -427,8 +492,8 @@ outline: none;
 .avatar-wrapper .avatar-dropdown-arrow {
   transition: opacity 0.1s linear, transform 0.15s linear;
   position: relative;
-  left:890px;
-  top:-124px;
+  left:255px;
+  top:-265px;
 }
 .avatar-wrapper .avatar-dropdown-arrow.active {
   transform: rotate(180deg);
@@ -439,12 +504,15 @@ outline: none;
 .avatar-photo {
   border-radius: 4px;
   position: relative;
-  left:890px;
-  top:-124px;
+  height: 38px;
+  width: 38px;
+  left:255px;
+  top:-265px;
+  border-radius: 50%;
 }
 .dropdown-wrapper {
   position:relative;
-  left:730px;
+  left:100px;
   transform: scale(0.8);
   transform-origin: right;
   z-index: 4;
@@ -460,7 +528,7 @@ outline: none;
 }
 .dropdown-wrapper.active {
   position: relative;
-  top:18px;
+  top:-95px;
   transform: scale(1);
   opacity: 1;
   visibility: visible;
@@ -508,7 +576,7 @@ outline: none;
 }
 #mixedSlider .MS-content .item {
   display: inline-block;
-  width:23%;
+  width:23.2%;
   position: relative;
   vertical-align: top;
   overflow: hidden;
@@ -533,7 +601,7 @@ outline: none;
 .blogTitle {
   position: relative;
   top:170px;
-  width:390px;
+
 }
 h2{
   font-size:0.7em;
@@ -543,6 +611,22 @@ h2{
   position: relative;
   top:235px;
   width:240px;
+}
+.linee{
+  width:87vw;
+  position:relative;
+  top:-30px;
+  left:35px;">
+}
+.containerr{
+  position: relative;
+  height:280px;
+  top:-170px;
+}
+#mixedSlider{
+  height: 150px;
+  position: relative;
+  top:-35px;
 }
 #mixedSlider .MS-content .item .imgTitle {
   position: relative;
@@ -557,7 +641,7 @@ h2{
 
   height:95px;
   background-color: rgba(255, 255, 255, 0.5);
-  width:242px;
+  width:auto;
   box-shadow: 1px 1px 5px #757171;
   bottom: -4.5%;
   border-bottom-left-radius:14px;
@@ -616,6 +700,10 @@ h2{
   left:98%;
   top:-60px;
   height:60px;
+}
+#vertical{
+  position: relative;
+  top: -105px;
 }
 .fa-ellipsis-v{
   position: relative;
