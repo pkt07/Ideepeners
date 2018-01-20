@@ -167,3 +167,31 @@ input#img-6:checked ~ .nav-dots label#img-dot-6 {
   border-top-left-radius: 20px;
    border-bottom-left-radius: 20px;
 }
+.vl{
+  position: absolute;
+  border-left: 4px solid black;
+  height:100px;
+  left:33%;
+  top:8px;
+}
+.vl1{
+  position: absolute;
+  border-left: 4px solid black;
+  height:100px;
+  left:33%;
+  top:140px;
+}
+.vl2{
+  position: absolute;
+  border-left: 4px solid black;
+  height:100px;
+  left:33%;
+  top:270px;
+}
+.vl3{
+  position: absolute;
+  border-left: 4px solid black;
+  height:100px;
+  left:33%;
+  top:405px;
+}
