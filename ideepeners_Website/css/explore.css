@@ -598,9 +598,11 @@ outline: none;
 .dropdown-links a:last-of-type {
   padding-bottom: 0;
 }
-.containerr { margin:150px auto;}
+.containerr { margin:220px auto;
+}
 #mixedSlider {
   position: relative;
+  top:100px;
 }
 #mixedSlider .MS-content {
   white-space: nowrap;
